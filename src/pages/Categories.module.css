@@ -1,0 +1,12 @@
+/* src/pages/Categories.module.css */
+
+.categoriesSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #faebd7;
+  padding: 20px;
+  box-sizing: border-box;
+}
