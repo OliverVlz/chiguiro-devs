@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Categories from './pages/Categories';
 import Schedule from './pages/Schedule';
 import Contact from './pages/Contact';
+import Ubication from './pages/Ubication';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -16,6 +17,7 @@ const App = () => {
         <Home />
         <Categories />
         <Schedule />
+        <Ubication />
         <Contact />
         <a href="#inicio" className="volver">Volver a Inicio</a>
       </div>
