@@ -2,10 +2,137 @@
 
 .contactSection {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f5f5dc;
+  background: linear-gradient(135deg, #f5f5dc, #e0e0e0);
   padding: 20px;
   box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.contactForm label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactForm input:hover,
+.contactForm textarea:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contactForm textarea {
+  height: 150px; /* Aumentar el tamaño del área de texto */
+  resize: none; /* Prevenir que el campo de texto se pueda agrandar */
+}
+
+.submitButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+.animatedBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  background: linear-gradient(45deg, hsl(327, 81%, 58%), hwb(0 39% 8%));
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+  z-index: -1; /* Colocar el fondo detrás del contenido */
+  border-radius: 100px;
+}
+
+
+.animatedButton {
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 6px hwb(160 20% 3%), 0 0 9px hsl(160 20% 3%), 0 0 10px hsl(160 20% 3%);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(51, 247, 182, 0.623), 0 0 12px rgba(51, 247, 182, 0.623), 0 0 15px rgba(51, 247, 182, 0.623);
+  }
+}
+
+
+.circularMenuContainer {
+  margin-top: 40px; /* Aumentar el margen superior para evitar superposición */
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+}
+
+.pulsing .circle-menu {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.circularMenuContainer .circle-menu-item {
+  transition: transform 0.3s ease;
+}
+
+.circularMenuContainer .circle-menu-item:hover {
+  transform: scale(1.1);
 }
