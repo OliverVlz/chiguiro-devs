@@ -14,7 +14,8 @@ const Home = () => {
           <h1 className={styles.title}>METABOTS</h1>
           <h2 className={styles.subTitle}>UNILLANOS</h2>
           <div className={styles.line}></div>
-          <h3 className={styles.description}>Primera competencia Nacional de Robótica Unillanos 2024</h3>
+          <p className={styles.description}>Primera competencia Nacional de Robótica</p>
+          <p className={styles.description1}>Unillanos 2024</p>
         </div>
       </div>
     </section>
