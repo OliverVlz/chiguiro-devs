@@ -39,12 +39,12 @@
 .textContainer {
   text-align: center;
   color: red;
-  margin-top: 130px;
+  margin-top: 120px;
   margin-right: 70px; 
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 4.5rem;
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
@@ -52,7 +52,7 @@
 }
 
 .subTitle {
-  font-size: 4rem;
+  font-size: 4.5rem;
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
