@@ -5,8 +5,6 @@ import styles from './Categories.module.css';
 const Categories = () => {
   return (
     <section id="categorias" className={styles.categoriesSection}>
-      <h2>Categorías Universidades, Expertos y Aficionados</h2>
-      <h3>Minisumo Autonomo</h3>
       <p>Para más detalle aquí</p>
       <a href="Link_reglamento" target="_blank">Reglamento</a>
       

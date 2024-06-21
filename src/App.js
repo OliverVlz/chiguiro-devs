@@ -7,7 +7,7 @@ import Schedule from './pages/Schedule';
 import Contact from './pages/Contact';
 import Ubication from './pages/Ubication';
 import Footer from './components/Footer';
-import './App.css';
+import './index.css';
 
 const App = () => {
   return (
