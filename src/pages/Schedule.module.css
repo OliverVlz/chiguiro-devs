@@ -5,7 +5,29 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #ffe4c4;
+  background: rgb(115,115,115);
+  background: linear-gradient(180deg, rgba(115,115,115,1) 0%, rgba(217,217,217,1) 100%);
   padding: 20px;
   box-sizing: border-box;
+}
+
+.calendarsContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.miniCalendar,
+.largeCalendar {
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.miniCalendar iframe{
+  border-radius: 20px;
+}
+.largeCalendar iframe {
+  border-radius: 8px;
 }
