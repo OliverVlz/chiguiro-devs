@@ -1,0 +1,143 @@
+/* Button.css */
+
+/* Estilo base del botón de descarga */
+.download-btn {
+  --borderWidth: 3; /* Define el ancho del borde del botón */
+  --buttonColor: #074347; /* Define el color principal del botón */
+  --bg: hsl(0, 100%, 97%); /* Define el color de fondo del botón */
+  --backdrop: transparent; /* Define el fondo del botón */
+  --fontSize: 1.3; /* Define el tamaño de la fuente */
+  --horizontalPadding: 16; /* Define el padding horizontal del botón */
+  --verticalPadding: 8; /* Define el padding vertical del botón */
+  background: var(--backdrop); /* Asigna el color de fondo */
+  border: calc(var(--borderWidth) * 1px) solid var(--buttonColor); /* Asigna el borde con el ancho y color definidos */
+  border-radius: 9999px; /* Define los bordes redondeados */
+  text-align: center; /* Centra el texto */
+  line-height: 240px; /* Define la altura de la línea */
+  color: var(--textColor, var(--buttonColor)); /* Define el color del texto */
+  cursor: pointer; /* Cambia el cursor a puntero al pasar por encima */
+  font-size: calc(var(--fontSize) * 1rem); /* Define el tamaño de la fuente */
+  font-weight: bold; /* Hace el texto en negrita */
+  font-family: sans-serif; /* Define la familia de fuentes */
+  outline: transparent; /* Elimina el borde del botón al enfocarse */
+  padding: calc(var(--verticalPadding) * 1px) calc(var(--horizontalPadding) * 1px); /* Define el padding */
+  position: relative; /* Define la posición relativa */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  height: 60px; /* Define la altura del botón */
+  display: flex; /* Usa flexbox para centrar el contenido */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  width: 260px; /* Define el ancho del botón */
+  transition: transform 0.2s; /* Añade una transición suave al transform */
+  transform: translate(0, calc(var(--y, 0) * 1%)) scale(var(--scale, 1)); /* Transforma el botón para animación */
+}
+
+/* Estilos al pasar el ratón sobre el botón */
+.download-btn:hover {
+  --y: -5; /* Mueve el botón hacia arriba */
+  --scale: 1.05; /* Aumenta el tamaño del botón */
+}
+
+/* Estilos al hacer clic en el botón */
+.download-btn:active {
+  --y: 0; /* Restaura la posición vertical */
+  --scale: 0.95; /* Reduce ligeramente el tamaño */
+}
+
+/* Estilos para los efectos de borde y animación */
+.download-btn span {
+  -webkit-clip-path: var(--clip); /* Define la forma del recorte (Clip Path) para Webkit */
+  clip-path: var(--clip); /* Define la forma del recorte (Clip Path) */
+  bottom: calc(var(--borderWidth) * -1px); /* Posición inferior */
+  left: calc(var(--borderWidth) * -1px); /* Posición izquierda */
+  position: absolute; /* Posición absoluta */
+  right: calc(var(--borderWidth) * -1px); /* Posición derecha */
+  top: calc(var(--borderWidth) * -1px); /* Posición superior */
+  z-index: 1; /* Nivel Z para superposición */
+}
+
+/* Hover para cambiar el clip path */
+.download-btn span:nth-of-type(1):hover,
+.download-btn span:nth-of-type(2):hover,
+.download-btn span:nth-of-type(3):hover,
+.download-btn span:nth-of-type(4):hover {
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Cambia el clip path a un rectángulo completo */
+  z-index: 2; /* Trae el elemento al frente */
+}
+
+/* Cambios en el clip path cuando se pasa el mouse sobre span */
+.download-btn span:nth-of-type(1):hover ~ b:nth-of-type(1),
+.download-btn span:nth-of-type(2):hover ~ b:nth-of-type(2),
+.download-btn span:nth-of-type(3):hover ~ b:nth-of-type(3),
+.download-btn span:nth-of-type(4):hover ~ b:nth-of-type(4) {
+  --clip: inset(0 0 0 0); /* Elimina el recorte */
+}
+
+/* Define las formas de clip path iniciales para span */
+.download-btn span:nth-of-type(1) {
+  --clip: polygon(0 0, 100% 0, 50% 50%, 50% 50%); /* Clip path triangular */
+}
+
+.download-btn span:nth-of-type(2) {
+  --clip: polygon(100% 0, 100% 100%, 50% 50%); /* Clip path triangular */
+}
+
+.download-btn span:nth-of-type(3) {
+  --clip: polygon(0 100%, 100% 100%, 50% 50%); /* Clip path triangular */
+}
+
+.download-btn span:nth-of-type(4) {
+  --clip: polygon(0 0, 0 100%, 50% 50%); /* Clip path triangular */
+}
+
+/* Estilos para los elementos b que crean el efecto de animación */
+.download-btn b {
+  -webkit-clip-path: var(--clip); /* Define la forma del recorte (Clip Path) para Webkit */
+  background: var(--slideColor, var(--buttonColor)); /* Define el color de fondo */
+  border: calc(var(--borderWidth) * 1px) solid var(--buttonColor); /* Define el borde */
+  bottom: calc(var(--borderWidth) * -1px); /* Posición inferior */
+  font-weight: bold; /* Texto en negrita */
+  clip-path: var(--clip); /* Define la forma del recorte */
+  color: var(--bg, #fafafa); /* Define el color del texto */
+  left: calc(var(--borderWidth) * -1px); /* Posición izquierda */
+  padding: calc(var(--verticalPadding) * 1px) calc(var(--horizontalPadding) * 1px); /* Padding */
+  position: absolute; /* Posición absoluta */
+  right: calc(var(--borderWidth) * -1px); /* Posición derecha */
+  top: calc(var(--borderWidth) * -1px); /* Posición superior */
+  transition: clip-path 0.25s ease; /* Transición suave del clip path */
+  border-radius: 9999px; /* Bordes redondeados */
+  display: flex; /* Usa flexbox para centrar el contenido */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+}
+
+/* Define las formas de clip path iniciales para b */
+.download-btn b:nth-of-type(1) {
+  --clip: inset(0 0 100% 0); /* Clip path inicial */
+}
+
+.download-btn b:nth-of-type(2) {
+  --clip: inset(0 0 0 100%); /* Clip path inicial */
+}
+
+.download-btn b:nth-of-type(3) {
+  --clip: inset(100% 0 0 0); /* Clip path inicial */
+}
+
+.download-btn b:nth-of-type(4) {
+  --clip: inset(0 100% 0 0); /* Clip path inicial */
+}
+
+/* Estilos para el botón secundario */
+.download-btn--secondary {
+  --buttonColor: hsl(0, 0%, 100%); /* Color del botón secundario */
+  --bg: hsl(0, 0%, 5%); /* Fondo del botón secundario */
+}
+
+/* Estilos para el botón relleno */
+.download-btn--filled {
+  --backdrop: #c7edef; /* Fondo del botón relleno */
+  --slideColor: hsl(0, 0%, 5%); /* Color del fondo al deslizar */
+  --textColor: hsl(0, 0%, 5%); /* Color del texto */
+  --bg: #c7edef; /* Fondo del botón */
+}
