@@ -5,13 +5,9 @@ const AwardsFutbol = () => {
   return (
     <section id="premiación" className={styles.awardsSection}>
       
-      <div className={`${styles.column} ${styles.imageContainer}`}>
-        <img src="/Categories_Imagenes/Trofeo-01.png" alt="Premios" className={styles.stylizedImage} />
-      </div>
-      
       <div className={`${styles.column} ${styles.textContent}`}>
         <div className={styles.titleContainer}>
-            <h3>FUTBOL RC</h3>
+            <h3>FUTBOLRC</h3>
             <h4>1er Lugar: 500,000 pesos</h4>
             <p>El primer lugar de cada categoría se llevará un impresionante premio de 500.000 pesos. 
                 Este premio reconoce la excelencia, el esfuerzo y la dedicación de los campeones en FUTBOLRC.</p>
@@ -21,6 +17,10 @@ const AwardsFutbol = () => {
         </div>    
             
         <hr />  
+      </div>
+      
+      <div className={`${styles.column} ${styles.imageContainer}`}>
+        <img src="/Categories_Imagenes/Trofeo-01.png" alt="Premios" className={styles.stylizedImage} />
       </div>
      
 
