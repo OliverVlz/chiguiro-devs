@@ -1,0 +1,83 @@
+/* Awards.module.css */
+.awardsSection {
+    display: flex;
+    flex-wrap: wrap; /* Permite el wrap de columnas */
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh; /* Ajusta según tus necesidades */
+    background: linear-gradient(to bottom, #b2b2b2, #fdfdfd);
+    padding: 16px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px;
+}
+
+.textContent, .imageContainer {
+    width: 100%; /* Se ajusta automáticamente en pantallas pequeñas */
+    text-align: center;
+}
+
+.textContent {
+    text-align: center;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.stylizedImage {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stylizedImage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.titleContainer h3 {
+    font-size: 1.5rem; /* Cambia el tamaño de la fuente */
+    color: #f3f1f1; /* Cambia el color del texto */
+    background-color: rgb(51, 47, 47); /* Fondo rojo */
+    padding: 20px 40px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    border-radius: 10px; /* Bordes redondeados, si lo deseas */
+    margin-bottom: 20px; /* Espacio inferior */
+    display: inline-block;
+}
+
+.titleContainer h4 {
+    font-size: 1.2rem; /* Cambia el tamaño de la fuente */
+}
+
+.titleContainer p {
+    padding: 0px 80px;
+}
+
+/* Media queries para diseño responsive */
+
+
+@media (max-width: 1000px) {
+    .awardsSection {
+        flex-direction: column;
+    }
+
+    .titleContainer p {
+        padding: 0px 20px; /* Ajusta el padding para pantallas más pequeñas */
+    }
+}
