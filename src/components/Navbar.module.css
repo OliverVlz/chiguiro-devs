@@ -1,0 +1,35 @@
+/* src/components/Navbar.module.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+.link {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.5rem; /* Asegurar que el padding sea consistente */
+  border-radius: 5px; /* Añadir border-radius aquí para que no cambie en hover */
+  transition: background-color 0.3s ease; /* Añadir transición para el fondo */
+}
+
+.link:hover,
+.active {
+  background-color: #555;
+}
+
+.inscripcionLink {
+  background-color: red;
+}
+
+.inscripcionLink:hover {
+  background-color: darkred;
+}

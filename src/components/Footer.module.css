@@ -1,0 +1,36 @@
+/* src/components/Footer.module.css */
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialLinks,
+.contactInfo,
+.otherLinks {
+  margin: 10px 0;
+}
+
+.socialLink,
+.footerLink {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.socialLink:hover,
+.footerLink:hover {
+  text-decoration: underline;
+}
