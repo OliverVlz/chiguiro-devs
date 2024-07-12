@@ -1,39 +1,50 @@
 // src/pages/Schedule.js
-import React from 'react';
-import jsPDF from 'jspdf';
+import React, { useState } from 'react';
 import styles from './Schedule.module.css';
+import Button from './Carp_Categories/Button';
 
 const Schedule = () => {
-    const downloadPDF = () => {
-        const doc = new jsPDF();
-        doc.text('Cronograma de actividades', 10, 10);
-        doc.save('schedule.pdf');
-    };
+    const [activeTab, setActiveTab] = useState(1);
+
+    const tabs = [
+        { id: 1, label: 'REGISTRO' },
+        { id: 2, label: 'Acto Inaugural' },
+        { id: 3, label: 'Apertura de Pistas' },
+        { id: 4, label: 'Inicio Competencia - Minisumo y Futbol Colegios' },
+        { id: 5, label: 'Receso' },
+        { id: 6, label: 'Inicio Competencia - Sumo RC, Futbol y Velocista' },
+        { id: 7, label: 'Desplazamiento a la Pista de Rally'},
+        { id: 8, label: 'Inicio Competencia - Rally RC'},
+        { id: 9, label: 'Premiación'},
+        { id: 10, label: 'Cierre'}
+    ];
 
     return (
         <section id="cronograma" className={styles.scheduleSection}>
-            <div className={styles.calendarsContainer}>
-                <div className={styles.miniCalendar}>
-                    <h3>Calendario Mensual</h3>
-                    <iframe
-                        src="https://calendar.google.com/calendar/embed?height=300&wkst=1&ctz=America%2FBogota&bgcolor=%23f94340&mode=MONTH&showTitle=0&showCalendars=0&showTz=0&showPrint=0&showTabs=0&src=Mzg4N2Y2NmE5MDUzY2JjODNmNzJmMDQ3OGEzOTZlODNlNGUzMWIwZWFmYzgzZGU0NzdlZDkxNjM3M2M1NGNmOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23D50000"
-                        style={{ border: 'solid 1px #777' }}
-                        width="200"
-                        height="200"
-                        
-                    ></iframe>
-                </div>
-                <div className={styles.largeCalendar}>
-                    <h3>Calendario Semanal</h3>
-                    <iframe
-                        src="https://calendar.google.com/calendar/embed?height=400&wkst=1&ctz=America%2FBogota&bgcolor=%23f94340&mode=AGENDA&showTitle=0&showCalendars=0&showTz=0&showPrint=0&src=Mzg4N2Y2NmE5MDUzY2JjODNmNzJmMDQ3OGEzOTZlODNlNGUzMWIwZWFmYzgzZGU0NzdlZDkxNjM3M2M1NGNmOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23D50000&dates=20240702/20240702"
-                        style={{ border: 'solid 1px #777' }}
-                        width="600"
-                        height="400"
-                    ></iframe>
+            <div>
+                <h1>Cronograma</h1>
+            </div>
+            <div className={styles.popup}>
+                <div className={styles.tabs}>
+                    {tabs.map((tab) => (
+                        <React.Fragment key={tab.id}>
+                            <input
+                                type="radio"
+                                id={`tab${tab.id}`}
+                                name="tab"
+                                checked={activeTab === tab.id}
+                                onChange={() => setActiveTab(tab.id)}
+                            />
+                            <label htmlFor={`tab${tab.id}`}>{tab.label}</label>
+                        </React.Fragment>
+                    ))}
+                    <div className={styles.marker}>
+                        <div className={styles.top}></div>
+                        <div className={styles.bottom}></div>
+                    </div>
                 </div>
             </div>
-            <button onClick={downloadPDF}>Descargar PDF</button>
+            <Button label="Descargar Calendario" downloadLink={"/Cronograma METABOTS.pdf"} />
         </section>
     );
 };
