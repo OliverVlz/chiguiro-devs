@@ -1,6 +1,7 @@
 /* Schedule.module.css */
 .scheduleSection {
-  height: 100%;
+  /* height: 100%; */
+  padding: 20px;
   width: 100%;
   overflow: hidden;
   background-color: #d3dce6;
@@ -11,22 +12,28 @@
   align-items: center;
 }
 
+.boton {
+  padding: 2em;
+}
+
 .popup {
   width: 80%;
   height: 80%;
-  min-height: 480px;
-  max-height: 480px;
+  min-height: 470px;
+  max-height: 470px;
   border-radius: 48px;
   box-sizing: border-box;
   border: 16px solid #ebf0f4;
   background-color: #dfe6ed;
   overflow: hidden;
   box-shadow: 16px 16px 48px #2e364330;
+  display: flex;
 }
 
 .tabs {
+  flex: 0 0 240px;
   width: 100%;
-  max-width: 240px;
+  max-width: 18vw;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -36,19 +43,29 @@
 }
 
 .tabs label {
-  font-size: 12px;
+  font-size: 0.7em;
   font-weight: 600;
   cursor: pointer;
   color: #525d6f;
   opacity: 0.4;
   transition: opacity 0.4s ease-in-out;
   display: block;
-  width: calc(100% + 0.5em);
+  width: 16vw;
   height: 7vh;
-  text-align: right;
+  text-align: left;
   z-index: 100;
   user-select: none;
   text-transform: uppercase;
+  padding-left: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+.tabContent {
+  flex: 1;
+  padding: 1vw;
+  overflow-y: auto;
 }
 
 .tabs input[type="radio"] {
@@ -62,7 +79,7 @@
 
 .marker {
   position: absolute;
-  width: 110%;
+  width: 18vw;
   height: 200%;
   display: flex;
   flex-direction: column;
@@ -86,6 +103,13 @@
 .bottom {
   height: calc(50% - 30px);
   border-radius: 0 32px 0 0;
+}
+
+.trophy {
+  width: 30vw;
+  height: 30vw;
+  margin-bottom: 15px;
+  border-radius: 8px;
 }
 
 .tabs input[type="radio"]:nth-of-type(1):checked ~ .marker { transform: translateY(calc(50% / 10 * 0)); }

@@ -7,17 +7,96 @@ const Schedule = () => {
     const [activeTab, setActiveTab] = useState(1);
 
     const tabs = [
-        { id: 1, label: 'REGISTRO' },
-        { id: 2, label: 'Acto Inaugural' },
-        { id: 3, label: 'Apertura de Pistas' },
-        { id: 4, label: 'Inicio Competencia - Minisumo y Futbol Colegios' },
-        { id: 5, label: 'Receso' },
-        { id: 6, label: 'Inicio Competencia - Sumo RC, Futbol y Velocista' },
-        { id: 7, label: 'Desplazamiento a la Pista de Rally'},
-        { id: 8, label: 'Inicio Competencia - Rally RC'},
-        { id: 9, label: 'Premiación'},
-        { id: 10, label: 'Cierre'}
+        {
+            id: 1, label: 'REGISTRO',
+            content: 'Ingreso al Coliseo de la Universidad de los llanos (Unillanos)'
+        },
+        {
+            id: 2, label: 'Acto Inaugural',
+            content: 'Presentaciones y palabras de bienvenida'
+        },
+        {
+            id: 3, label: 'Apertura de Pistas',
+            content: 'Pistas disponibles para pruebas'
+        },
+        {
+            id: 4, label: 'Minisumo y Futbol-Col',
+            content: (
+                <div>
+                    <h3>Inicio de Competencia Categorias Minisumo y Futbol Colegios</h3>
+                    <ul>
+                        <li>Eliminatorias de grupo</li>
+                        <li>Clasificatoria a Octavos de Final</li>
+                        <li>Clasificatoria a Cuartos de Final</li>
+                        <li>Semifinales</li>
+                        <li>Finales</li>
+                    </ul>
+                </div>
+            )
+        },
+        {
+            id: 5, label: 'Receso',
+            content: 'Contenido del tab 5'
+        },
+        {
+            id: 6, label: 'SumoRC, Futbol y Velocista',
+            content: (
+                <div>
+                    <h3>Inicio de Competencia Categorias Minisumo RC, Futbol y Velocista</h3>
+                    <ul>
+                        <li>Eliminatorias de grupo</li>
+                        <li>Clasificatoria a Octavos de Final</li>
+                        <li>Clasificatoria a Cuartos de Final</li>
+                        <li>Semifinales</li>
+                        <li>Finales</li>
+                    </ul>
+                </div>
+            )
+        },
+        {
+            id: 7, label: 'Desplazamiento',
+            content: 'Contenido del tab 7'
+        },
+        {
+            id: 8, label: 'Rally RC',
+            content: (
+                <div>
+                    <h3>Inicio de Competencia Categorias Rally RC</h3>
+                    <ul>
+                        <li>Eliminatorias de grupo</li>
+                        <li>Clasificatoria a Octavos de Final</li>
+                        <li>Clasificatoria a Cuartos de Final</li>
+                        <li>Semifinales</li>
+                        <li>Finales</li>
+                    </ul>
+                </div>
+            )
+        },
+        {
+            id: 9, label: 'Premiación',
+            content: (
+                <div>
+                    <h3>Premiaciones de la Categorias</h3>
+                    <img src="/Categories_Imagenes/Trofeo-01.png" alt="Trofeo" className={styles.trophy} />
+                </div>
+            )
+        },
+        {
+            id: 10, label: 'Cierre',
+            content: 'Contenido del tab 10'
+        }
     ];
+
+    const TabContent = ({ activeTab, tabs }) => {
+        const activeTabData = tabs.find(tab => tab.id === activeTab);
+        return (
+            <div className={styles.tabContent}>
+                {typeof activeTabData?.content === 'string'
+                    ? <p>{activeTabData.content}</p>
+                    : activeTabData?.content}
+            </div>
+        );
+    };
 
     return (
         <section id="cronograma" className={styles.scheduleSection}>
@@ -43,8 +122,12 @@ const Schedule = () => {
                         <div className={styles.bottom}></div>
                     </div>
                 </div>
+                <TabContent activeTab={activeTab} tabs={tabs} />
             </div>
-            <Button label="Descargar Calendario" downloadLink={"/Cronograma METABOTS.pdf"} />
+            <div className={styles.boton}>
+                <Button label="Descargar Calendario" downloadLink={"/Cronograma METABOTS.pdf"} />
+            </div>
+
         </section>
     );
 };
