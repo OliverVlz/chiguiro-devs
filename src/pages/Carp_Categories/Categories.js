@@ -33,7 +33,7 @@ const Categories = () => {
           constentPara="¡Prepárate para la emoción con nuestros robots velocistas! Estos robots, similares a la F1 en pruebas de clasificación, 
                         corren en una pista trazada por una línea, buscando completar el recorrido en el menor tiempo posible. Las pistas incluyen curvas cerradas y abiertas y largas rectas, todo un reto emocionante. 
                         ¡No te pierdas este espectáculo lleno de adrenalina y velocidad!  "
-          downloadLink="/Categories_pdf/MiniSumoAutonomo.pdf"
+          downloadLink="/Categories_pdf/Velocistas.pdf"
         />
 
         

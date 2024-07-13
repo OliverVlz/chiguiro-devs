@@ -12,6 +12,7 @@ const Schedule = () => {
             content: (
                 <div>
                     <h3>Ingreso al Coliseo de la Universidad de los llanos (Unillanos)</h3>
+                    <img src="/MAPA_CAMPUS_BARCELONA.webp" alt="Trofeo" className={styles.campus} />
                 </div>
             )
         },
