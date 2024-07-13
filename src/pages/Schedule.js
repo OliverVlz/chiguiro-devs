@@ -9,15 +9,27 @@ const Schedule = () => {
     const tabs = [
         {
             id: 1, label: 'REGISTRO',
-            content: 'Ingreso al Coliseo de la Universidad de los llanos (Unillanos)'
+            content: (
+                <div>
+                    <h3>Ingreso al Coliseo de la Universidad de los llanos (Unillanos)</h3>
+                </div>
+            )
         },
         {
             id: 2, label: 'Acto Inaugural',
-            content: 'Presentaciones y palabras de bienvenida'
+            content: (
+                <div>
+                    <h3>Presentaciones y palabras de bienvenida</h3>
+                </div>
+            )
         },
         {
             id: 3, label: 'Apertura de Pistas',
-            content: 'Pistas disponibles para pruebas'
+            content: (
+                <div>
+                    <h3>Pistas disponibles para pruebas</h3>
+                </div>
+            )
         },
         {
             id: 4, label: 'Minisumo y Futbol-Col',
@@ -36,7 +48,11 @@ const Schedule = () => {
         },
         {
             id: 5, label: 'Receso',
-            content: 'Contenido del tab 5'
+            content: (
+                <div>
+                    <h3>Receso para Almuerzo</h3>
+                </div>
+            )
         },
         {
             id: 6, label: 'SumoRC, Futbol y Velocista',
@@ -55,7 +71,11 @@ const Schedule = () => {
         },
         {
             id: 7, label: 'Desplazamiento',
-            content: 'Contenido del tab 7'
+            content: (
+                <div>
+                    <h3>Desplazamiento a la pista de Rally RC ubicada en el BUNKER</h3>
+                </div>
+            )
         },
         {
             id: 8, label: 'Rally RC',
@@ -83,7 +103,11 @@ const Schedule = () => {
         },
         {
             id: 10, label: 'Cierre',
-            content: 'Contenido del tab 10'
+            content: (
+                <div>
+                    <h3>Cierre del Evento</h3>
+                </div>
+            )
         }
     ];
 
