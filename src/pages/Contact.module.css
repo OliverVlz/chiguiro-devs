@@ -6,11 +6,43 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(180deg, #FFFFFF, #A6A6A6);
+  background: linear-gradient(180deg, #EEEEEE, #A6A6A6);
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
   position: relative;
+}
+
+.titleContainer {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.titleContainer h1 {
+  font-size: 3rem; /* Tamaño de la fuente */
+  color: white; /* Color del texto */
+  background-color: red; /* Fondo rojo */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  border-radius: 10px; /* Bordes redondeados, si lo deseas */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+.titleContainer h2 {
+  font-size: 2rem; /* Cambia el tamaño de la fuente */
+  color: #f3f1f1; /* Cambia el color del texto */
+  background-color: rgb(51, 47, 47); /* Fondo rojo */
+  padding: 20px 80px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  border-radius: 10px; /* Bordes redondeados, si lo deseas */
+  margin-bottom: 20px; /* Espacio inferior */
+  display: inline-block;
+}
+
+.titleContainer h3 {
+  font-size: 1.5rem; /* Cambia el tamaño de la fuente */
+  color: #0000ff; /* Cambia el color del texto */
 }
 
 .contactForm {
@@ -69,10 +101,27 @@
   font-size: 16px;
   cursor: pointer;
   position: relative;
-  z-index: 1;
-  transition: background-color 0.3s ease;
+  z-index: 10;
 }
 
 .submitButton:hover {
   background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}
+
+.success {
+  color: green;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}
+
+.loader {
+  margin-top: 1em;
+  font-size: 1em;
+  color: #000;
 }

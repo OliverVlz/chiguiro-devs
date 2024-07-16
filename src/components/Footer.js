@@ -19,6 +19,7 @@ const Footer = () => {
           <a href="#inicio" className={styles.footerLink}>Inicio</a>
           <a href="#categorias" className={styles.footerLink}>Categorías</a>
           <a href="#cronograma" className={styles.footerLink}>Cronograma</a>
+          <a href="#ubicacion" className={styles.footerLink}>Ubicación</a>
           <a href="#contacto" className={styles.footerLink}>Contacto</a>
         </div>
       </div>
