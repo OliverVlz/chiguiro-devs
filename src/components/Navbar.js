@@ -43,7 +43,7 @@ const Navbar = () => {
         <ScrollLink to="cronograma" smooth={true} duration={SCROLL_DURATION} className={`${styles.link} ${activeSection === 'cronograma' ? styles.active : ''}`} onClick={toggleMobileMenu}>Cronograma</ScrollLink> 
         <ScrollLink to="ubicacion" smooth={true} duration={SCROLL_DURATION} className={`${styles.link} ${activeSection === 'ubicacion' ? styles.active : ''}`} onClick={toggleMobileMenu}>Ubicación</ScrollLink>
         <ScrollLink to="contacto" smooth={true} duration={SCROLL_DURATION} className={`${styles.link} ${activeSection === 'contacto' ? styles.active : ''}`} onClick={toggleMobileMenu}>Contacto</ScrollLink> 
-        <a href="https://www.canva.com/design/DAGIFHOapIs/sOxbU8yE8_oNPTyURHvu4Q/edit" className={`${styles.link} ${styles.inscripcionLink}`} target="_blank" rel="noopener noreferrer" onClick={toggleMobileMenu}>Inscripción!!</a>
+        <a href="https://shorturl.at/TVI7Y" className={`${styles.link} ${styles.inscripcionLink}`} target="_blank" rel="noopener noreferrer" onClick={toggleMobileMenu}>Inscripción!!</a>
       </div>
     </nav>
   );
