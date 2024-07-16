@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -23,7 +22,6 @@ const App = () => {
         <Schedule />
         <Ubication />
         <Contact />
-        <a href="#inicio" className="volver">Volver a Inicio</a>
       </div>
       <Footer/>
     </div>
