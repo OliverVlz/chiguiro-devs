@@ -17,9 +17,11 @@ export default function Card({
       <div className="card__body">
         <h1 className="card__body__head">{constentHead}</h1>
         <p className="card__body__content">{constentPara}</p>
-               
-        <Button label="Descargar Reglamento" downloadLink={downloadLink} />
-      
+        
+        <div className="card__button-container">
+          <Button label="Descargar Reglamento" downloadLink={downloadLink} />
+        </div>
+
       </div>
       <div className="card__footer">
       </div>
