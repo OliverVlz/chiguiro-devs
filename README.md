@@ -4,14 +4,15 @@
 git clone https://github.com/OliverVlz/chiguiro-devs.git
 ```
 
-## Install Dependencies
+## Move to "chiguiro" and Install Dependencies
 
 ```bash
+cd chiguiro
 npm install
 ```
 
 ## Run the application
 
 ```bash
-npm start
+npm run dev
 ```
