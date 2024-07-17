@@ -5,8 +5,8 @@
   color: white;
   padding: 20px 0;
   text-align: center;
-  position: relative; /* Cambiado de absolute a relative */
-  width: 100%;
+  /* position: relative; Cambiado de absolute a relative */
+  /* width: 100%; */
 }
 
 .footerContainer {
