@@ -24,7 +24,7 @@ const Categories = () => {
           imgSrc="/Categories_Imagenes/VELOCISTA1.png"
           constentHead="VELOCISTAS"
           constentPara="Robots velocistas compiten en una pista trazada por una línea, completando el recorrido en el menor tiempo. La pista incluye curvas cerradas, abiertas y rectas. Es una emocionante competencia."
-          downloadLink="/Categories_pdf/MiniSumoAutonomo.pdf"
+          downloadLink="/Categories_pdf/Velocista.pdf"
         />
 
         
