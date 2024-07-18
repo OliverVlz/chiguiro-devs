@@ -3,7 +3,7 @@
 /* Estilo base del botón de descarga */
 .download-btn {
   --borderWidth: 2; /* Ligeramente más delgado */
-  --buttonColor: #074347; /* Color principal del botón */
+  --buttonColor: #074348; /* Color principal del botón */
   --bg: hsl(0, 100%, 97%); /* Color de fondo del botón */
   --backdrop: transparent; /* Fondo del botón */
   --fontSize: 0.9; /* Tamaño de fuente más pequeño */
