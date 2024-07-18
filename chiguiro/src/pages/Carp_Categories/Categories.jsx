@@ -15,7 +15,7 @@ const Categories = () => {
         <Card
           imgSrc="/Categories_Imagenes/SUMO1.png"
           constentHead="SUMO AUTÓNOMO"
-          constentPara="Combate de robots autónomos en un Dhoyo. El objetivo es encontrar y empujar al oponente fuera del área de combate. Gana el que saque al oponente o quede último dentro."
+          constentPara="Combate de robots autónomos en un Dhoyo. El objetivo en esta  competencia es encontrar y empujar al oponente fuera del área de combate. Gana el que saque al oponente o quede último dentro."
           downloadLink="/Categories_pdf/MiniSumoAutonomo.pdf"
         />
 
