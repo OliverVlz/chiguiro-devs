@@ -21,7 +21,7 @@
 }
 
 .textContent, .imageContainer {
-    width: 100%; /* Se ajusta automáticamente en pantallas pequeñas */
+    /* Se ajusta automáticamente en pantallas pequeñas */
     text-align: center;
 }
 
@@ -49,24 +49,31 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+.titleContainer h2 {
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 
 .titleContainer h3 {
-    font-size: 1.5rem; /* Cambia el tamaño de la fuente */
-    color: #f3f1f1; /* Cambia el color del texto */
-    background-color: rgb(51, 47, 47); /* Fondo rojo */
-    padding: 20px 40px; /* Espaciado interno */
-    text-align: center; /* Centra el texto */
-    border-radius: 10px; /* Bordes redondeados, si lo deseas */
-    margin-bottom: 20px; /* Espacio inferior */
+    font-size: clamp(0.2rem, 4vw, 2rem);
+    color: #f3f1f1;
+    background-color: rgb(51, 47, 47);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
     display: inline-block;
 }
 
 .titleContainer h4 {
-    font-size: 1.2rem; /* Cambia el tamaño de la fuente */
+    font-size: clamp(1.1rem, 3.5vw, 1.2rem); /* Cambia el tamaño de la fuente */
 }
 
 .titleContainer p {
-    padding: 0px 80px;
+    padding: 0 20px;
 }
 
 /* Media queries para diseño responsive */

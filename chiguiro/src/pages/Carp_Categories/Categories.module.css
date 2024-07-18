@@ -5,16 +5,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
-  padding: 20px;
-  background: linear-gradient(to bottom, #b2b2b2, #fdfdfd); 
+  padding: 10px; /* Ajuste para todas las resoluciones */
+  background: linear-gradient(to bottom, #b2b2b2, #fdfdfd);
   box-sizing: border-box;
 }
 
 .titleContainer {
   text-align: center;
   width: 100%;
-  margin-bottom: 20px;
 }
 
 .cardContainer {
@@ -26,27 +24,31 @@
 }
 
 .titleContainer h1 {
-  font-size: 3rem; /* Tamaño de la fuente */
-  color: white; /* Color del texto */
-  background-color: red; /* Fondo rojo */
-  padding: 20px; /* Espaciado interno */
-  text-align: center; /* Centra el texto */
-  border-radius: 10px; /* Bordes redondeados, si lo deseas */
-  margin-bottom: 20px; /* Espacio inferior */
+  font-size: clamp(1.2rem, 5vw, 2.5rem); /* Más dinámico y adaptable */
+  color: white;
+  background-color: red;
+  padding: 5px 10px; /* Menor padding para dispositivos pequeños */
+  border-radius: 5px; /* Bordes más sutiles */
+  margin-bottom: 5px; /* Menor separación entre elementos */
 }
 
 .titleContainer h2 {
-  font-size: 2rem; /* Cambia el tamaño de la fuente */
-  color: #f3f1f1; /* Cambia el color del texto */
-  background-color: rgb(51, 47, 47); /* Fondo rojo */
-  padding: 20px 80px; /* Espaciado interno */
-  text-align: center; /* Centra el texto */
-  border-radius: 10px; /* Bordes redondeados, si lo deseas */
-  margin-bottom: 20px; /* Espacio inferior */
-  display: inline-block;
+  font-size: clamp(1rem, 4vw, 2rem); /* Tamaño más pequeño para subtítulos */
+  color: #f3f1f1;
+  background-color: rgb(51, 47, 47);
+  padding: 5px 10px; /* Menor padding */
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
 
 .titleContainer h3 {
   font-size: 1.5rem; /* Cambia el tamaño de la fuente */
   color: #0000ff; /* Cambia el color del texto */
+}
+
+@media (max-width: 600px) {
+  .titleContainer h1, .titleContainer h2 {
+    font-size: clamp(0.8rem, 5vw, 1.5rem); /* Reducción significativa para pantallas pequeñas */
+    padding: 3px 6px; /* Reducción del padding */
+  }
 }

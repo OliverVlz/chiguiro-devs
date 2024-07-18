@@ -1,79 +1,75 @@
 /* Card.css */
-  .card {
-    flex: 1 1 calc(25% - 40px); /* dos, tres, cuatro... tarjetas por fila con un espacio de 20px entre ellas */
-    max-width: calc(25% - 40px);
-    border-radius: 15px;
-    margin: 20px;
-    transform: scale(0.9);
-    transition: transform 150ms ease-in, box-shadow 0.2s linear;
-    background: white;
-    box-shadow: 10px 10px 5px -2px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px -2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px -2px rgba(0, 0, 0, 0.75);
-
-  }
+.card {
+  flex: 1 1 calc(23% - 30px); /* Reduzco el tamaño de las tarjetas */
+  max-width: calc(23% - 30px);
+  border-radius: 15px;
+  margin: 15px; /* Reduzco el margen */
+  transform: scale(0.9);
+  transition: transform 150ms ease-in, box-shadow 0.2s linear;
+  background: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Reduzco la sombra */
+}
 
 
 
-  .card__body {
-    text-align: center;
-    padding: 20px;
-    display: flex; /* Usa flexbox para centrar */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    flex-direction: column; /* Alinea el contenido en una columna */
-  }
-  
-  
-  .card:hover {
-    transform: scale(1);
-    box-shadow: 10px 10px 28px -2px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 28px -2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 28px -2px rgba(0, 0, 0, 0.75);
-  }
-  
-  
-  
-  .card__header img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px 15px 0px 0px;
-  }
-  
-  .card__body {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .card__body h1 {
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-  }
-  
-  .card__body p {
-    color: gray;
-    font-size: 17px;
-  }
-  
+
+.card__body {
+  text-align: center;
+  padding: 15px;
+  display: flex; /* Usa flexbox para centrar */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Alinea el contenido en una columna */
+}
+
+
+.card:hover {
+  transform: scale(0.95);
+  box-shadow: 10px 10px 28px -2px rgba(0, 0, 0, 0.15); /* Ajusto la sombra */
+}
+
+
+
+.card__header img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.card__body {
+  text-align: center;
+  padding: 20px;
+}
+
+.card__body h1 {
+  font-size: 1.5rem; /* Reduzco el tamaño de la fuente */
+  margin-bottom: 10px;
+  color: #333; /* Ajusto el color de la fuente */
+}
+
+.card__body p {
+  color: #666; /* Ajusto el color de la fuente */
+  font-size: 16px; /* Reduzco el tamaño de la fuente */
+}
+
 /* Responsividad */
 @media (max-width: 1724px) {
-  .card {
-    flex: 1 1 calc(33.333% - 40px); /* Dos tarjetas por fila en pantallas medianas */
-    max-width: calc(33.333% - 40px);
-  }
+.card {
+    flex: 1 1 calc(30% - 30px); /* Ajusto el tamaño para pantallas medianas */
+    max-width: calc(30% - 30px);
+}
 }
 
 @media (max-width: 1224px) {
-  .card {
-    flex: 1 1 calc(50% - 40px); /* Dos tarjetas por fila en pantallas medianas */
-    max-width: calc(50% - 40px);
-  }
+.card {
+    flex: 1 1 calc(48% - 30px); /* Ajusto el tamaño para pantallas medianas */
+    max-width: calc(48% - 30px);
+}
 }
 
 @media (max-width: 900px) {
-  .card {
-    flex: 1 1 calc(100% - 40px); /* Una tarjeta por fila en pantallas pequeñas */
-    max-width: calc(100% - 40px);
-  }
+.card {
+    flex: 1 1 calc(100% - 30px); /* Ajusto el tamaño para pantallas pequeñas */
+    max-width: calc(100% - 30px);
 }
- 
+}
