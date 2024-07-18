@@ -14,6 +14,7 @@
 
 }
 
+
 .boton {
   padding-top: 2em;
 }
@@ -52,7 +53,10 @@
   color: #525d6f;
   opacity: 0.4;
   transition: opacity 0.4s ease-in-out;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
   width: 16vw;
   height: 3em;
   text-align: left;
@@ -66,12 +70,29 @@
   box-sizing: border-box;
 }
 
+.tabs label p {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs label p:first-child {
+  font-size: 0.8em;
+}
+
+.tabs label p:last-child {
+  font-size: 0.4em;
+  color: red;
+}
+
 .tabContent {
   flex: 1;
   padding-left: 3vw;
+  padding-right: 3vw;
   overflow-y: auto;
   font-size: 0.8rem;
   text-overflow: ellipsis;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .tabs input[type="radio"] {
