@@ -1,19 +1,21 @@
 /* Schedule.module.css */
 .scheduleSection {
-  /* height: 100%; */
-  padding: 20px;
-  /* width: 100%; */
-  overflow: hidden;
-  background-color: #d3dce6;
-  font-family: monospace;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  min-height: 100vh; /* Ajusta según tus necesidades */
+  background: linear-gradient(to bottom, #fdfdfd, #A6A6A6);
+  font-family: monospace;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: auto;
+
 }
 
 .boton {
-  padding: 2em;
+  padding-top: 2em;
 }
 
 .popup {
@@ -23,8 +25,8 @@
   max-height: 470px;
   border-radius: 48px;
   box-sizing: border-box;
-  border: 16px solid #ebf0f4;
-  background-color: #dfe6ed;
+  border: 0.3em solid #50494944;
+  background-color: #EFE9E0;
   overflow: hidden;
   box-shadow: 16px 16px 48px #2e364330;
   display: flex;
@@ -34,16 +36,17 @@
   flex: 0 0 240px;
   width: 100%;
   max-width: 18vw;
-  height: 100%;
+  height: 110%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
-  padding: 10px 0;
+  /* padding-left: 1em; */
+  /* padding-top: 4em; */
 }
 
 .tabs label {
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-weight: 600;
   cursor: pointer;
   color: #525d6f;
@@ -51,12 +54,13 @@
   transition: opacity 0.4s ease-in-out;
   display: block;
   width: 16vw;
-  height: 7vh;
+  height: 3em;
   text-align: left;
   z-index: 100;
   user-select: none;
   text-transform: uppercase;
-  padding-left: 1.5em;
+  /* padding-left: 4em; */
+  padding: 2em;
   overflow: hidden;
   text-overflow: ellipsis;
   box-sizing: border-box;
@@ -64,8 +68,10 @@
 
 .tabContent {
   flex: 1;
-  padding: 1vw;
+  padding-left: 3vw;
   overflow-y: auto;
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
 }
 
 .tabs input[type="radio"] {
@@ -95,14 +101,14 @@
 }
 
 .top {
-  height: calc(45% + 30px);
+  height: calc(50% + 1em);
   margin-bottom: auto;
-  border-radius: 0 0 32px 0;
+  border-radius: 0 0 1em 0;
 }
 
 .bottom {
-  height: calc(50% - 30px);
-  border-radius: 0 32px 0 0;
+  height: calc(50% - 3em);
+  border-radius: 0 1em 0 0;
 }
 
 .trophy {
