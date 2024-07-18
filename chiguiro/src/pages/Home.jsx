@@ -2,8 +2,9 @@
 import React from 'react';
 import styles from './Home.module.css'; // Importa los estilos del módulo CSS
 import logo from '../assets/LogoCircle.png'; // Ajusta el path según la ubicación de tu logo
-import Button_home_inscripcion from '../components/Button_home_inscripcion';
-import Button_home_detalles from '../components/Button_home_detalles';
+// import Button_home_inscripcion from '../components/Button_home_inscripcion';
+// import Button_home_detalles from '../components/Button_home_detalles';
+import Buttons from '../components/Button_home_group';
 
 const Home = () => {
   return (
@@ -20,12 +21,21 @@ const Home = () => {
           <p className={styles.description1}>Unillanos 2024</p>
           <div className={styles.button_home}>
             {/* <a href="https://shorturl.at/TVI7Y" target="_blank" rel="noopener noreferrer" className={styles.button_preinscripcion}>Preinscripción</a> */}
-            <Button_home_inscripcion /> 
+            {/* <Button_home_inscripcion /> 
             <Button_home_detalles
               description="Descripción detallada de la competencia y sus categorías."
-            />
+            /> */}
+            <Buttons />
           </div>
         </div>
+      </div>
+      <div className={styles.text_box}>
+        <p>¡Bienvenidos al Primer Concurso de Robótica de la Universidad de los Llanos! 
+        </p>
+        <p>Explora el mundo de la tecnología y la innovación con nuestro emocionante evento de robótica. Organizado por la Universidad de los Llanos junto con nuestros talentosos estudiantes. 
+        </p>
+        <p>No te lo pierdas! ¡Sé parte del futuro hoy!
+        </p>
       </div>
       {/* <div className={styles.customShapeDivider}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

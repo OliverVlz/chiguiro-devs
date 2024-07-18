@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import styles from './Navbar.module.css';
-import Button_navbar_inscripcion from './Button_navbar_inscripcion';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('');
@@ -45,7 +44,6 @@ const Navbar = () => {
         <ScrollLink to="ubicacion" smooth={true} duration={SCROLL_DURATION} className={`${styles.link} ${activeSection === 'ubicacion' ? styles.active : ''}`} onClick={toggleMobileMenu}>Ubicación</ScrollLink>
         <ScrollLink to="contacto" smooth={true} duration={SCROLL_DURATION} className={`${styles.link} ${activeSection === 'contacto' ? styles.active : ''}`} onClick={toggleMobileMenu}>Contacto</ScrollLink> 
         <a href="https://shorturl.at/TVI7Y" className={`${styles.link} ${styles.inscripcionLink}`} target="_blank" rel="noopener noreferrer" onClick={toggleMobileMenu}>Pre-Inscripción!!</a>
-        <Button_navbar_inscripcion />
       </div>
     </nav>
   );

@@ -1,0 +1,84 @@
+.buttons-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button-wrapper {
+    position: relative;
+    margin: 2px;
+  }
+  
+  .menu-button {
+    color: white;
+    background-color: red;
+    padding: 0.3rem 0.8rem;
+    line-height: 1.8;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02857em;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: none;
+    border: 0.08px solid red;
+    margin: 0;
+  }
+  
+  .menu-button:hover {
+    background-color: rgba(255, 0, 0, 0.726);
+    border: 0.08px solid rgba(255, 0, 0, 0.726);
+}
+  
+  .text-button:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+
+  .menu-options {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: calc(-5px);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex; /* Utilizar flexbox para organizar los elementos */
+    flex-direction: column; /* Organizar los elementos en columnas */
+    min-width: 150px; /* Ancho mínimo para evitar que sea demasiado pequeño */
+  }
+  
+  .menu-options p {
+    padding: 10px 12px;
+    font-size: 0.75rem;
+    color: #740606;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .menu-options p:hover {
+    background-color: #f0f0f0;
+  }
+
+  .text-button {
+    color: red;
+    background-color: transparent;
+    padding: 0.3rem 0.8rem;
+    line-height: 1.8;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02857em;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: none;
+    border: 0.08px solid red;
+    text-decoration: none;
+    box-shadow: none;
+    margin: 0;
+  }
+
+
+  
+  

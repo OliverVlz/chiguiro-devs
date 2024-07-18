@@ -42,61 +42,37 @@
 .logoContainer {
   flex:1;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   width: 100%; /* Ajusta el tamaño del logo dentro del círculo */
   height: auto;
-  margin-top: 15px;
-  margin-left: 1px;
-  
+  margin-top: calc(8% - 5%);
+  margin-left: 15px;
 }
 
 .logo {
   max-width: 150%;
   height: auto;
-  width: 90%; /* Ajusta el tamaño del logo según tus necesidades */
+  width: 73%; /* Ajusta el tamaño del logo según tus necesidades */
 }
 
 .textContainer {
   flex:1;
   text-align: center;
   color: red;
-  margin-top: 125px;
-  margin-right: 20px;
+  margin-top: calc(14.5% - 5%);
+  margin-right: calc(12% - 5%);
 }
 
 .button_home {
-  margin-top: 20px; /* Ajusta el valor según tus necesidades */
+  margin-top: 15px; /* Ajusta el valor según tus necesidades */
   display: flex;
   justify-content: center;
-  gap: 2px;
-}
-
-.button_preinscripcion {
-  color: white;
-  background-color: red;
-  padding: 7.85px 23px;
-  line-height: 1.8;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.02857em;
-  cursor: pointer;
-  font-weight: 500;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  box-shadow: none;
-  border: 0.1px solid red;
-  text-decoration: none; 
-  margin: 0;
-}
-
-.button_preinscripcion:hover {
-  background-color: rgba(255, 0, 0, 0.726); /* Cambiar el color de fondo en hover */
-  border: 0.5px solid  #b94040;
 }
 
 .title, .subTitle {
-  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-size: 3.7rem;
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
@@ -108,7 +84,7 @@
   max-width: 590px; /* Ancho máximo de la línea */
   height: 4px; /* Altura de la línea */
   background-color: white; /* Color de fondo de la línea */
-  border: 3px solid red; /* Borde rojo */
+  border: 2.2px solid red; /* Borde rojo */
   border-radius: 8px;
   margin: 1rem auto; /* Centramos la línea horizontalmente */
   animation: expand 1.6s ease-out forwards; /* Animación para expandir la línea */
@@ -125,24 +101,43 @@
 }
 
 .description{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 1rem 0 0 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
 }
 
 .description1{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
+}
+
+.text_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  padding: 20px 20px;
+}
+
+.text_box p {
+  text-align: center;
+  margin: 0;
+  font-size: 0.8rem;
+  padding: 5px 10px;
 }
 
 /* --------------------Responsive design TABLETS --------------------*/
 @media (min-width: 768px) and (max-width: 1100px) {
 
   .homeSection {
-    min-height: 75vh;
+    min-height: 80vh;
   }   
 
   .content {
@@ -153,27 +148,27 @@
 
   .logoContainer {
     justify-content: center;
-    width: 40%; /* Ajusta el tamaño del logo dentro del círculo */
+    width: 50%; /* Ajusta el tamaño del logo dentro del círculo */
     height: auto;
-    margin: 0; /* Add margin for spacing */
+    margin-top: calc(12% - 5%);
   }
 
   .textContainer {
-    max-width: 100%;
+    max-width: 80%;
     margin: 20px 0;
   }
 
   .title, .subTitle {
-    font-size: 4.5rem; /* Adjust font size for tablets */
+    font-size: 3.5rem; /* Adjust font size for tablets */
   }
 
 }
 
-/* Responsive design MOBILE */
+/* ---------------------Responsive design MOBILE -----------------*/
 @media (max-width: 767px) {
 
   .homeSection {
-    min-height: 68vh;
+    min-height: 90vh;
   }  
 
   .content {
@@ -184,7 +179,7 @@
 
   .logoContainer {
     justify-content: center;
-    width: 65%; /* Ajusta el tamaño del logo dentro del círculo */
+    width: 98%; /* Ajusta el tamaño del logo dentro del círculo */
     height: auto;
     margin: 0; /* Add margin for spacing */
   }
@@ -208,6 +203,10 @@
     height: 3px; /* Adjust height for mobile */
     margin: 0.5rem auto; /* Adjust margin for mobile */
   }
-
+  
+  .text_box {
+    width: 95%;
+    padding: 30px 20px;
+  }
 }
 
