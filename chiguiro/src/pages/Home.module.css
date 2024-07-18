@@ -181,7 +181,7 @@
     justify-content: center;
     width: 98%; /* Ajusta el tamaño del logo dentro del círculo */
     height: auto;
-    margin: 0; /* Add margin for spacing */
+    margin: 40px 0 0 0; /* Add margin for spacing */
   }
 
   .textContainer {
@@ -206,7 +206,7 @@
   
   .text_box {
     width: 95%;
-    padding: 30px 20px;
+    padding: 20px 0 50px 0;
   }
 }
 
