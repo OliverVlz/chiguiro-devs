@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'; 
 
 
-const Button_home = () => {
+const Button_home_inscripcion = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -24,12 +23,17 @@ const Button_home = () => {
   return (
     <>
       <Button
-        variant="outlined"
-        color="error"
         onClick={handleClick}
-        endIcon={<ArrowDropDownIcon />}
         aria-controls="button-home-menu"
         aria-haspopup="true"
+        sx={{
+          backgroundColor: '#FF0000', // Color de fondo en hexadecimal
+          color: '#FFFFFF !important', // Color de la letra en hexadecimal
+          padding: '7.85px 23px',
+          '&:hover': {
+            backgroundColor: 'rgba(255, 0, 0, 0.726)', // Color de fondo al pasar el mouse en hexadecimal
+          }
+        }}
       >
         Inscripción
       </Button>
@@ -42,6 +46,8 @@ const Button_home = () => {
           vertical: 'bottom',
           horizontal: 'center',
         }}
+        disableAutoFocus
+        disableScrollLock
         transformOrigin={{
           vertical: 'top',
           horizontal: 'center',
@@ -59,4 +65,4 @@ const Button_home = () => {
   );
 };
 
-export default Button_home;
+export default Button_home_inscripcion;

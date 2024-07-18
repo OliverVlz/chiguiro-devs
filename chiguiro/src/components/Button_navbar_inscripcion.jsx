@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'; 
 
 
-const Button_navbar = () => {
+const Button_navbar_inscripcion = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -60,4 +60,4 @@ const Button_navbar = () => {
   );
 };
 
-export default Button_navbar;
+export default Button_navbar_inscripcion;

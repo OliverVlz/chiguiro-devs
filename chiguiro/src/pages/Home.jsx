@@ -2,7 +2,8 @@
 import React from 'react';
 import styles from './Home.module.css'; // Importa los estilos del módulo CSS
 import logo from '../assets/LogoCircle.png'; // Ajusta el path según la ubicación de tu logo
-import Button_home from '../components/Button_home';
+import Button_home_inscripcion from '../components/Button_home_inscripcion';
+import Button_home_detalles from '../components/Button_home_detalles';
 
 const Home = () => {
   return (
@@ -18,8 +19,11 @@ const Home = () => {
           <p className={styles.description}>Primera competencia Nacional de Robótica</p>
           <p className={styles.description1}>Unillanos 2024</p>
           <div className={styles.button_home}>
-            <a href="https://shorturl.at/TVI7Y" target="_blank" rel="noopener noreferrer" className={styles.button_preinscripcion}>Preinscripción</a>
-            <Button_home /> 
+            {/* <a href="https://shorturl.at/TVI7Y" target="_blank" rel="noopener noreferrer" className={styles.button_preinscripcion}>Preinscripción</a> */}
+            <Button_home_inscripcion /> 
+            <Button_home_detalles
+              description="Descripción detallada de la competencia y sus categorías."
+            />
           </div>
         </div>
       </div>
