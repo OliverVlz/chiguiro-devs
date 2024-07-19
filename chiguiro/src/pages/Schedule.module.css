@@ -20,7 +20,7 @@
 }
 
 .popup {
-  width: 80%;
+  width: 90%;
   height: 80%;
   min-height: 470px;
   max-height: 470px;
@@ -34,9 +34,9 @@
 }
 
 .tabs {
-  flex: 0 0 240px;
+  flex: 0 0 300px;
   width: 100%;
-  max-width: 18vw;
+  max-width: 40%;
   height: 110%;
   display: flex;
   flex-direction: column;
@@ -50,14 +50,14 @@
   font-size: 0.8em;
   font-weight: 600;
   cursor: pointer;
-  color: #525d6f;
+  color: #000000;
   opacity: 0.4;
   transition: opacity 0.4s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
   line-height: 1.2;
-  width: 16vw;
+  width: 100%;
   height: 3em;
   text-align: left;
   z-index: 100;
@@ -76,11 +76,13 @@
 }
 
 .tabs label p:first-child {
-  font-size: 0.8em;
+  /* font-size: 0.8em; */
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
 }
 
 .tabs label p:last-child {
-  font-size: 0.4em;
+  /* font-size: 0.8em; */
+  font-size: clamp(0.5rem, 1vw, 0.6rem) !important; 
   color: red;
 }
 
@@ -94,6 +96,35 @@
   text-align: justify;
   text-justify: inter-word;
 }
+.tabContent h1 {
+  font-size: clamp(1.2rem, 1vw, 2rem) !important; 
+  font-weight: 600;
+  color: #525d6f;
+}
+
+.tabContent h2 {
+  font-size: clamp(1.1rem, 1vw, 1.8rem) !important; 
+  font-weight: 400;
+  color: #525d6f;
+}
+
+.tabContent h3 {
+  font-size: clamp(1.2rem, 1vw, 2rem) !important; 
+  font-weight: 600;
+  color: #ff0101;
+
+}
+
+.tabContent p {
+  font-size: clamp(0.8rem, 0.9vw, 1.1rem) !important; 
+  font-weight: 200;
+  color: #3e4653;
+}
+.tabContent img {
+  width: auto;
+  height: 3.7rem;
+  
+}
 
 .tabs input[type="radio"] {
   display: none;
@@ -106,7 +137,7 @@
 
 .marker {
   position: absolute;
-  width: 18vw;
+  width: 100%;
   height: 200%;
   display: flex;
   flex-direction: column;

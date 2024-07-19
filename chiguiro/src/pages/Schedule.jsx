@@ -24,7 +24,7 @@ const Schedule = () => {
             content: (
                 <div>
                     <h1>Registro</h1>
-                    <h3>Registro - Ingreso al Coliseo Universidad de los Llanos</h3>
+                    <h2>Registro - Ingreso al Coliseo Universidad de los Llanos</h2>
                     <h3>7:00 - 8:30 am</h3>
                     <p>¡Bienvenidos! Los participantes deben ingresar y registrarse en el Coliseo de la Universidad de los Llanos. Por favor, asegúrese de llegar a tiempo para completar el proceso de registro y recibir su kit de bienvenida.</p>
                 </div>
@@ -71,6 +71,7 @@ const Schedule = () => {
                     <h1>Apertura de Pistas para Pruebas</h1>
                     <h3>9:30 - 10:30 am</h3>
                     <p>Después de la ceremonia inaugural, las pistas estarán abiertas para que los participantes puedan familiarizarse con el área de competencia y realizar pruebas libres. Es una excelente oportunidad para ajustar los últimos detalles antes del inicio oficial de las competencias.</p>
+                    <img src="/Pistas-remove.webp" alt="Pistas" />
                 </div>
             )
         },
@@ -93,6 +94,7 @@ const Schedule = () => {
                     <h1>Inicio Competencia - Minsumo y Futbol Colegios</h1>
                     <h3>11:00 - 12:30 am</h3>   
                     <p>La competencia se desarrollará en varias fases para determinar los ganadores de las categorías Minisumo y Futbol Colegios. Las fases son las siguientes:</p>
+                    <img src="/Sumo-Fut.png" alt="Sumo, Futbol, Velocista" />
                     <ul>
                         <li>Eliminatorias de Grupo</li>
                         <li>Clasificatoria a Octavos de Final</li>
@@ -129,7 +131,7 @@ const Schedule = () => {
         {
             id: 6, label: (
                 <div>
-                    <p>SumoRC - Futbol - Velocista</p>
+                    <p>SumoRC-Futbol-Velocista</p>
                     <p style={{
                         color: 'red',
                         fontSize: '0.8em',
@@ -145,6 +147,7 @@ const Schedule = () => {
                     <h1>Inicio Competencia - Sumo RC, Futbol y Velocista</h1>
                     <h3>2:30 - 3:30 pm</h3>   
                     <p>Las competencias de Sumo RC, Futbol y Velocista darán inicio. Al igual que en la mañana, se desarrollarán en varias fases:</p>
+                    <img src="/Sumo-Fut-Vel.png" alt="Sumo, Futbol, Velocista" />
                     <ul>
                         <li>Eliminatorias de Grupo</li>
                         <li>Clasificatoria a Octavos de Final</li>
