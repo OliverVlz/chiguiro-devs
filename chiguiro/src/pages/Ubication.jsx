@@ -50,6 +50,7 @@ const Ubication = () => {
     <section id="ubicacion" className={styles.ubicationSection}>
       <div className={styles.titleContainer}>
         <h1>UBICACIÓN</h1>
+        <h3>Kilómetro 12 Vía a Puerto López, Vda. Barcelona, Villavicencio, Meta</h3>
       </div>
       <div className={styles.mapContainer}>
         <MapContainer center={position} zoom={19} className={styles.map}>
