@@ -17,13 +17,13 @@
 }
 
 .titleContainer h1 {
-  font-size: 3rem; /* Tamaño de la fuente */
+  font-size: clamp(1.2rem, 5vw, 2.5rem); /* Más dinámico y adaptable */
   color: white; /* Color del texto */
   background-color: red; /* Fondo rojo */
-  padding: 10px; /* Espaciado interno */
+  padding: 5px 10px; /* Espaciado interno */
   text-align: center; /* Centra el texto */
-  border-radius: 10px; /* Bordes redondeados */
-  margin-bottom: 20px; /* Espacio inferior */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-bottom: 5px; /* Espacio inferior */
 }
 
 .mapContainer {
