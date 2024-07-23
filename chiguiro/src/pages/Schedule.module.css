@@ -14,9 +14,48 @@
 
 }
 
+.countdownContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem; 
+  margin-bottom: 1rem;
+}
+
+.countdownWrapper {
+  margin-left: 1rem; 
+}
+
+.countdownExplanation {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  color: #525d6f;
+  max-width: 18rem;
+  line-height: 1.2;
+  text-align: right;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+}
+
+.title h1{
+  font-size: clamp(1.2rem, 5vw, 2.5rem); /* Más dinámico y adaptable */
+  color: white;
+  background-color: red;
+  padding: 5px 10px; /* Menor padding para dispositivos pequeños */
+  border-radius: 5px; /* Bordes más sutiles */
+  margin-bottom: 5px; /* Menor separación entre elementos*/
+}
 
 .boton {
   padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .popup {
@@ -31,6 +70,7 @@
   overflow: hidden;
   box-shadow: 16px 16px 48px #2e364330;
   display: flex;
+  margin-bottom: 4em;
 }
 
 .tabs {
@@ -77,7 +117,7 @@
 
 .tabs label p:first-child {
   /* font-size: 0.8em; */
-  font-size: clamp(0.6rem, 1.5vw, 1rem);
+  font-size: clamp(0.6rem, 1.7vw, 1.2rem);
 }
 
 .tabs label p:last-child {
@@ -153,21 +193,23 @@
 }
 
 .top {
-  height: calc(50% + 1em);
+  height: calc(50% + 0.4em);
   margin-bottom: auto;
   border-radius: 0 0 1em 0;
 }
 
 .bottom {
-  height: calc(50% - 3em);
+  height: calc(50% - 3.5em);
   border-radius: 0 1em 0 0;
 }
 
-.trophy {
-  width: 30vw;
+.images {
+  width: auto;
   height: 30vw;
   margin-bottom: 15px;
+  padding-left: 2rem;
   border-radius: 8px;
+  text-align: center;
 }
 
 .tabs input[type="radio"]:nth-of-type(1):checked ~ .marker { transform: translateY(calc(50% / 10 * 0)); }

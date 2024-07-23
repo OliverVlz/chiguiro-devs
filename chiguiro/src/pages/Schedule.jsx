@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import styles from './Schedule.module.css';
 import Button from './Carp_Categories/Button';
+import Countdown from '../components/countdown';
 
 const Schedule = () => {
     const [activeTab, setActiveTab] = useState(1);
@@ -71,7 +72,7 @@ const Schedule = () => {
                     <h1>Apertura de Pistas para Pruebas</h1>
                     <h3>9:30 - 10:30 am</h3>
                     <p>Después de la ceremonia inaugural, las pistas estarán abiertas para que los participantes puedan familiarizarse con el área de competencia y realizar pruebas libres. Es una excelente oportunidad para ajustar los últimos detalles antes del inicio oficial de las competencias.</p>
-                    <img src="/Pistas-remove.webp" alt="Pistas" />
+                    <img src="/Pistas-remove.webp" alt="Pistas" className={styles.images}/>
                 </div>
             )
         },
@@ -94,7 +95,7 @@ const Schedule = () => {
                     <h1>Inicio Competencia - Minsumo y Futbol Colegios</h1>
                     <h3>11:00 - 12:30 am</h3>   
                     <p>La competencia se desarrollará en varias fases para determinar los ganadores de las categorías Minisumo y Futbol Colegios. Las fases son las siguientes:</p>
-                    <img src="/Sumo-Fut.png" alt="Sumo, Futbol, Velocista" />
+                    <img src="/Sumo-Fut.png" alt="Sumo, Futbol, Velocista" className={styles.images}/>
                     <ul>
                         <li>Eliminatorias de Grupo</li>
                         <li>Clasificatoria a Octavos de Final</li>
@@ -147,7 +148,7 @@ const Schedule = () => {
                     <h1>Inicio Competencia - Sumo RC, Futbol y Velocista</h1>
                     <h3>2:30 - 3:30 pm</h3>   
                     <p>Las competencias de Sumo RC, Futbol y Velocista darán inicio. Al igual que en la mañana, se desarrollarán en varias fases:</p>
-                    <img src="/Sumo-Fut-Vel.png" alt="Sumo, Futbol, Velocista" />
+                    <img src="/Sumo-Fut-Vel.png" alt="Sumo, Futbol, Velocista" className={styles.images} />
                     <ul>
                         <li>Eliminatorias de Grupo</li>
                         <li>Clasificatoria a Octavos de Final</li>
@@ -199,6 +200,7 @@ const Schedule = () => {
                     <h1>Inicio Competencia - Rally RC</h1>
                     <h3>4:00 - 5:30 pm</h3>   
                     <p>Comienza la emocionante competencia de Rally RC, con las siguientes fases:</p>
+                    <img src="/RallyCar.webp" alt="Rally RC Car" className={styles.images} />
                     <ul>
                         <li>Eliminatorias de Grupo</li>
                         <li>Clasificatoria a Octavos de Final</li>
@@ -268,8 +270,19 @@ const Schedule = () => {
 
     return (
         <section id="cronograma" className={styles.scheduleSection}>
-            <div>
-                <h1>Cronograma</h1>
+            <div className={styles.title}>
+                <h1>CRONOGRAMA</h1>
+            </div>
+            <div className={styles.countdownContainer}>
+                <div className={styles.countdownExplanation}>
+                    <h2>Tiempo restante para el inicio del evento</h2>
+                </div>
+                <div className={styles.countdownWrapper}>
+                    <Countdown />
+                </div>
+            </div>
+            <div className={styles.boton}>
+                <Button label="Descargar Calendario" downloadLink={"/Cronograma METABOTS.pdf"} />
             </div>
             <div className={styles.popup}>
                 <div className={styles.tabs}>
@@ -292,9 +305,7 @@ const Schedule = () => {
                 </div>
                 <TabContent activeTab={activeTab} tabs={tabs} />
             </div>
-            <div className={styles.boton}>
-                <Button label="Descargar Calendario" downloadLink={"/Cronograma METABOTS.pdf"} />
-            </div>
+            
 
         </section>
     );

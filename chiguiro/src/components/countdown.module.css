@@ -1,0 +1,43 @@
+.countdown {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  background-color: #3333338e;
+  padding: 0.5em;
+  border-radius: 45px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.countdown span {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.countdown span:first-child {
+  margin-left: 0;
+}
+
+.countdown span:last-child {
+  margin-right: 0;
+}
+
+.countdown span:before,
+.countdown span:after {
+  content: ":";
+  color: #fff;
+}
+
+.countdown span:last-child:before,
+.countdown span:last-child:after {
+  content: "";
+}
+
+.countdown span:before {
+  margin-right: -5px;
+}
+
+.countdown span:after {
+  margin-left: -5px;
+}
