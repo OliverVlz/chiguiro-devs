@@ -7,7 +7,7 @@
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  background: linear-gradient(180deg, #EEEEEE, #A6A6A6);
+  background: linear-gradient(180deg, #FFFFFF, #A6A6A6);
   min-height: 100vh; /* Asegura que la sección ocupe toda la altura de la ventana */
 }
 
@@ -18,13 +18,13 @@
 }
 
 .titleContainer h2 {
-  font-size: 2rem; /* Tamaño de la fuente */
+  font-size: clamp(1rem, 4vw, 2rem); /* Tamaño más pequeño para subtítulos */
   color: #f3f1f1; /* Color del texto */
   background-color: #333; /* Fondo oscuro */
-  padding: 20px 80px; /* Espaciado interno */
+  padding: 5px 10px; /* Menor padding */
   text-align: center; /* Centra el texto */
-  border-radius: 10px; /* Bordes redondeados */
-  margin-bottom: 20px; /* Espacio inferior */
+  border-radius: 5px;
+  margin-bottom: 5px;
   display: inline-block;
 }
 
