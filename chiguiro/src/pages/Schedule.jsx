@@ -1,18 +1,39 @@
 // src/pages/Schedule.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Schedule.module.css';
 import Button from './Carp_Categories/Button';
 import Countdown from '../components/countdown';
+import axios from 'axios';
 
 const Schedule = () => {
     const [activeTab, setActiveTab] = useState(1);
+    const [scheduleData, setScheduleData] = useState([]);
+
+    useEffect(() => {
+        const fetchScheduleData = async () => {
+          const url = 'https://sheet.best/api/sheets/4dd8895a-1789-4f01-96ce-8de37448b7db';
+          try {
+            const response = await axios.get(url);
+            const data = response.data;
+            const schedule = data.reduce((acc, row) => {
+              acc[row.ID] = row;
+              return acc;
+            }, {});
+            setScheduleData(schedule);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+    
+        fetchScheduleData();
+      }, []);
 
     const tabs = [
         {
             id: 1, label: (
                 <div>
                     <p>Registro</p>
-                    <p>7:00 - 8:30 am</p>
+                    <p>{scheduleData[1]?.HORA || '7:00 - 8:30 am'}</p>
                 </div>
             ),
             content: (
