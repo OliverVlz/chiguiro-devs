@@ -12,14 +12,7 @@ const Schedule = () => {
             id: 1, label: (
                 <div>
                     <p>Registro</p>
-                    <p style={{
-                        color: 'red',
-                        fontSize: '0.8em',
-                        margin: 0,
-                        padding: 0
-                    }}>
-                        7:00 - 8:30 pm
-                    </p>
+                    <p>7:00 - 8:30 am</p>
                 </div>
             ),
             content: (
@@ -35,14 +28,7 @@ const Schedule = () => {
             id: 2, label: (
                 <div>
                     <p>Acto Inaugural</p>
-                    <p style={{
-                        color: 'red',
-                        fontSize: '0.8em',
-                        margin: 0,
-                        padding: 0
-                    }}>
-                        8:30 - 9:30 pm
-                    </p>
+                    <p> 8:30 - 9:30 am</p>
                 </div>
             ),
             content: (
@@ -57,14 +43,7 @@ const Schedule = () => {
             id: 3, label: (
                 <div>
                     <p>Apertura de Pistas</p>
-                    <p style={{
-                        color: 'red',
-                        fontSize: '0.8em',
-                        margin: 0,
-                        padding: 0
-                    }}>
-                        9:30 - 10:30 pm
-                    </p>
+                    <p> 9:30 - 10:30 am </p>
                 </div>
             ),
             content: (
@@ -80,14 +59,7 @@ const Schedule = () => {
             id: 4, label: (
                 <div>
                     <p>Minisumo - Futbol</p>
-                    <p style={{
-                        color: 'red',
-                        fontSize: '0.8em',
-                        margin: 0,
-                        padding: 0
-                    }}>
-                        11:00 - 12:30 am
-                    </p>
+                    <p> 11:00 - 12:30 am </p>
                 </div>
             ),
             content: (
@@ -111,14 +83,7 @@ const Schedule = () => {
             id: 5, label: (
                 <div>
                     <p>Receso</p>
-                    <p style={{
-                        color: 'red',
-                        fontSize: '0.8em',
-                        margin: 0,
-                        padding: 0
-                    }}>
-                        1:00 - 2:00 pm
-                    </p>
+                    <p> 1:00 - 2:00 pm </p>
                 </div>
             ),
             content: (
@@ -133,14 +98,7 @@ const Schedule = () => {
             id: 6, label: (
                 <div>
                     <p>SumoRC-Futbol-Velocista</p>
-                    <p style={{
-                        color: 'red',
-                        fontSize: '0.8em',
-                        margin: 0,
-                        padding: 0
-                    }}>
-                        2:30 - 3:30 pm
-                    </p>
+                    <p> 2:30 - 3:30 pm </p>
                 </div>
             ),
             content: (
@@ -163,14 +121,7 @@ const Schedule = () => {
             id: 7, label: (
                 <div>
                     <p>Desplazamiento</p>
-                    <p style={{
-                        color: 'red',
-                        fontSize: '0.8em',
-                        margin: 0,
-                        padding: 0
-                    }}>
-                        3:50 pm
-                    </p>
+                    <p> 3:50 pm </p>
                 </div>
             ),
             content: (
@@ -185,14 +136,7 @@ const Schedule = () => {
             id: 8, label: (
                 <div>
                     <p>Rally RC</p>
-                    <p style={{
-                        color: 'red',
-                        fontSize: '0.8em',
-                        margin: 0,
-                        padding: 0
-                    }}>
-                        4:00 - 5:30 pm
-                    </p>
+                    <p> 4:00 - 5:30 pm </p>
                 </div>
             ),
             content: (
@@ -215,14 +159,7 @@ const Schedule = () => {
             id: 9, label: (
                 <div>
                     <p>Premiación</p>
-                    <p style={{
-                        color: 'red',
-                        fontSize: '0.8em',
-                        margin: 0,
-                        padding: 0
-                    }}>
-                        5:40 - 6:30 pm
-                    </p>
+                    <p> 5:40 - 6:30 pm </p>
                 </div>
             ),
             content: (
@@ -237,14 +174,7 @@ const Schedule = () => {
             id: 10, label: (
                 <div>
                     <p>Cierre</p>
-                    <p style={{
-                        color: 'red',
-                        fontSize: '0.8em',
-                        margin: 0,
-                        padding: 0
-                    }}>
-                        6:30 pm
-                    </p>
+                    <p> 6:30 pm </p>
                 </div>
             ),
             content: (
