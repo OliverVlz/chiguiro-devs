@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import styles from './countdown.module.css';
 
-const Countdown = () => {
+const Countdown = ({targetDate}) => {
   const [timeRemaining, setTimeRemaining] = useState('');
-  const targetDate = new Date(2024, 7, 23, 0, 0, 0);
+  // const targetDate = new Date(2024, 7, 23, 0, 0, 0);
 
   useEffect(() => {
     const updateCountdown = () => {
       const currentDate = new Date();
-      const difference = targetDate - currentDate;
-
+      // const difference = targetDate - currentDate;
+      const difference = new Date(targetDate - currentDate);
       if (difference <= 0) {
         setTimeRemaining('¡YA ES HORA, PONTE A PRUEBA!');
         return;
