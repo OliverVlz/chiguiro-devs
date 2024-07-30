@@ -14,6 +14,91 @@
 
 }
 
+
+
+/* ... Toggle Switch ... */
+
+.toggleSwitch {
+  position: relative;
+  width: 6rem;
+  display: inline-block;
+  text-align: left;
+}
+
+.toggleSwitchInput {
+  display: none;
+}
+
+.toggleSwitchLabel {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+}
+
+.toggleSwitchInner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in-out;
+}
+
+.toggleSwitchInner:before,
+.toggleSwitchInner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 26px;
+  padding: 0;
+  line-height: 26px;
+  font-size: 12px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.toggleSwitchInner:before {
+  content: "General";
+  padding-left: 10px;
+  background-color: #2f2f2f;
+  color: #fff;
+}
+
+.toggleSwitchInner:after {
+  content: "Colegios";
+  padding-right: 10px;
+  background-color: #3498db;
+  color: #fff;
+  text-align: right;
+}
+
+.toggleSwitchSwitch {
+  display: block;
+  width: 18px;
+  margin: 4px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 64px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggleSwitchInput:checked + .toggleSwitchLabel .toggleSwitchInner {
+  margin-left: 0;
+}
+
+.toggleSwitchInput:checked + .toggleSwitchLabel .toggleSwitchSwitch {
+  right: 0px;
+}
+
+
+
+
 .countdownContainer {
   display: flex;
   align-items: center;
@@ -175,24 +260,13 @@
   opacity: 2;
 }
 
-/* .marker {
+.marker {
   position: absolute;
   width: 100%;
   height: 200%;
   display: flex;
   flex-direction: column;
   top: -100%;
-  left: 0;
-  transition: transform 0.2s ease-in-out;
-} */
-
-.marker {
-  position: absolute;
-  width: 100%;
-  height: calc(200% / var(--number-of-tabs));
-  display: flex;
-  flex-direction: column;
-  top: calc(-100% / var(--number-of-tabs));
   left: 0;
   transition: transform 0.2s ease-in-out;
 }
@@ -204,7 +278,7 @@
   box-shadow: 32px 32px 48px #2e364315;
 }
 
-/* .top {
+.top {
   height: calc(50% + 0.4em);
   margin-bottom: auto;
   border-radius: 0 0 1em 0;
@@ -213,18 +287,9 @@
 .bottom {
   height: calc(50% - 3.5em);
   border-radius: 0 1em 0 0;
-} */
-
-.top {
-  height: calc(50% + 0.4em);
-  margin-bottom: auto;
-  border-radius: 0 0 1em 0;
 }
 
-.bottom {
-  height: calc(50% - (3.5em / var(--number-of-tabs)));
-  border-radius: 0 1em 0 0;
-}
+
 
 .images {
   width: auto;
@@ -241,17 +306,15 @@
   margin-left: 10px;
 }
 
-/* .tabs input[type="radio"]:nth-of-type(1):checked ~ .marker { transform: translateY(calc(50% / 10 * 0)); }
-.tabs input[type="radio"]:nth-of-type(2):checked ~ .marker { transform: translateY(calc(50% / 10 * 1)); }
-.tabs input[type="radio"]:nth-of-type(3):checked ~ .marker { transform: translateY(calc(50% / 10 * 2)); }
-.tabs input[type="radio"]:nth-of-type(4):checked ~ .marker { transform: translateY(calc(50% / 10 * 3)); }
-.tabs input[type="radio"]:nth-of-type(5):checked ~ .marker { transform: translateY(calc(50% / 10 * 4)); }
-.tabs input[type="radio"]:nth-of-type(6):checked ~ .marker { transform: translateY(calc(50% / 10 * 5)); }
-.tabs input[type="radio"]:nth-of-type(7):checked ~ .marker { transform: translateY(calc(50% / 10 * 6)); }
-.tabs input[type="radio"]:nth-of-type(8):checked ~ .marker { transform: translateY(calc(50% / 10 * 7)); }
-.tabs input[type="radio"]:nth-of-type(9):checked ~ .marker { transform: translateY(calc(50% / 10 * 8)); }
-.tabs input[type="radio"]:nth-of-type(10):checked ~ .marker { transform: translateY(calc(50% / 10 * 9)); } */
 
-.tabs input[type="radio"]:nth-of-type(n):checked ~ .marker {
-  transform: translateY(calc(50% / var(--number-of-tabs) * (var(--tab-index) - 1)));
-}
+.tabs input[type="radio"]:nth-of-type(1):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 0)); }
+.tabs input[type="radio"]:nth-of-type(2):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 1)); }
+.tabs input[type="radio"]:nth-of-type(3):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 2)); }
+.tabs input[type="radio"]:nth-of-type(4):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 3)); }
+.tabs input[type="radio"]:nth-of-type(5):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 4)); }
+.tabs input[type="radio"]:nth-of-type(6):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 5)); }
+.tabs input[type="radio"]:nth-of-type(7):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 6)); }
+
+.tabs.option1 input[type="radio"]:nth-of-type(8):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 7)); }
+.tabs.option1 input[type="radio"]:nth-of-type(9):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 8)); }
+.tabs.option1 input[type="radio"]:nth-of-type(10):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 9)); }

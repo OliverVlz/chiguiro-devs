@@ -217,12 +217,16 @@ const Schedule = () => {
                 id: 1, label: (
                     <div>
                         <p>Registro</p>
-                        <p>{scheduleData[1]?.HORA || '7:00 - 8:30 am'}</p>
+                        <p>{scheduleData[1]?.HORA || '9:00 - 9:30 am'}</p>
                     </div>
                 ),
                 content: (
                     <div>
                         <h1>Registro</h1>
+                        <h2>Registro - Centro Comercial Viva</h2>
+                        <h3>9:00 - 9:30 am</h3>
+                        <p>¡Bienvenidos! Los participantes deben ingresar y registrarse en el Coliseo de la Universidad de los Llanos. Por favor, asegúrese de llegar a tiempo para completar el proceso de registro y recibir su kit de bienvenida.</p>
+                    
                     </div>
                 )
             },
@@ -230,12 +234,14 @@ const Schedule = () => {
                 id: 2, label: (
                     <div>
                         <p>Acto Inaugural</p>
-                        <p> 8:30 - 9:30 am</p>
+                        <p>10:30 - 11:30 am</p>
                     </div>
                 ),
                 content: (
                     <div>
                         <h1>Acto Inaugural</h1>
+                        <h3>10:30 - 11:30 am</h3>
+                        <p>La ceremonia inaugural será un evento emocionante donde se presentarán los detalles del día y se dará la bienvenida oficial a todos los asistentes. Disfrutaremos de discursos motivadores y una presentación especial.</p>
                     </div>
                 )
             },
@@ -243,114 +249,93 @@ const Schedule = () => {
                 id: 3, label: (
                     <div>
                         <p>Apertura de Pistas</p>
-                        <p> 9:30 - 10:30 am </p>
+                        <p> 11:30 - 12:30 am </p>
                     </div>
                 ),
                 content: (
                     <div>
                         <h1>Apertura de Pistas para Pruebas</h1>
+                        <h3>11:30 - 12:30 am</h3>
+                        <p>Después de la ceremonia inaugural, las pistas estarán abiertas para que los participantes puedan familiarizarse con el área de competencia y realizar pruebas libres. Es una excelente oportunidad para ajustar los últimos detalles antes del inicio oficial de las competencias.</p>
+                        <img src="/Pistas-remove.webp" alt="Pistas" className={styles.images} />                   
                     </div>
                 )
             },
             {
                 id: 4, label: (
                     <div>
-                        <p>Minisumo - Futbol</p>
-                        <p> 11:00 - 12:30 am </p>
+                        <p>Futbol Colegios</p>
+                        <p> 12:30 - 2:30 pm </p>
                     </div>
                 ),
                 content: (
                     <div>
-                        <h1>Inicio Competencia - Minsumo y Futbol Colegios</h1>
+                        <h1>Inicio Competencia - Futbol Colegios</h1>
+                        <h3>12:30 - 2:30 pm </h3>
+                        <p>La competencia se desarrollará en varias fases para determinar los ganadores de las categorías Minisumo y Futbol Colegios. Las fases son las siguientes:</p>
+                        <img src="/Sumo-Fut.png" alt="Sumo, Futbol" className={styles.images} />
+                        <ul>
+                            <li>Eliminatorias de Grupo</li>
+                            <li>Clasificatoria a Octavos de Final</li>
+                            <li>Clasificatoria a Cuartos de Final</li>
+                            <li>Semifinales</li>
+                            <li>Finales</li>
+                        </ul>
                     </div>
                 )
             },
             {
                 id: 5, label: (
                     <div>
-                        <p>Receso</p>
-                        <p> 1:00 - 2:00 pm </p>
+                        <p>Premiación</p>
+                        <p> 2:50 - 3:30 pm </p>
                     </div>
                 ),
                 content: (
                     <div>
-                        <h1>Receso</h1>
+                        <h1>Premiación</h1>
+                        <h3>2:50 - 3:30 pm</h3>
+                        <p>Se llevará a cabo la ceremonia de premiación para Futbol Colegios. Los ganadores recibirán sus trofeos y medallas en reconocimiento a su esfuerzo y desempeño en las competencias.</p>
                     </div>
                 )
             },
             {
                 id: 6, label: (
                     <div>
-                        <p>SumoRC-Futbol-Velocista</p>
-                        <p> 2:30 - 3:30 pm </p>
-                    </div>
-                ),
-                content: (
-                    <div>
-                        <h1>Inicio Competencia - Sumo RC, Futbol y Velocista</h1>
-                    </div>
-                )
-            },
-            {
-                id: 7, label: (
-                    <div>
-                        <p>Desplazamiento</p>
-                        <p> 3:50 pm </p>
-                    </div>
-                ),
-                content: (
-                    <div>
-                        <h1>Desplazamiento a la Pista de Rally - Bunker</h1>
-                    </div>
-                )
-            },
-            {
-                id: 8, label: (
-                    <div>
-                        <p>Rally RC</p>
-                        <p> 4:00 - 5:30 pm </p>
-                    </div>
-                ),
-                content: (
-                    <div>
-                        <h1>Inicio Competencia - Rally RC</h1>
-                    </div>
-                )
-            },
-            {
-                id: 9, label: (
-                    <div>
-                        <p>Premiación</p>
-                        <p> 5:40 - 6:30 pm </p>
-                    </div>
-                ),
-                content: (
-                    <div>
-                        <h1>Premiación - Todas las Categorías</h1>
-                    </div>
-                )
-            },
-            {
-                id: 10, label: (
-                    <div>
                         <p>Cierre</p>
-                        <p> 6:30 pm </p>
+                        <p> 3:40 pm </p>
                     </div>
                 ),
                 content: (
                     <div>
-                        <h1>Cierre - Coliseo Universidad de los Llanos</h1>
+                        <h1>Cierre</h1>
+                        <h3>3:40 pm</h3>
+                        <p>El evento culminará con un acto de clausura. Agradecemos a todos los participantes, organizadores y público por hacer de este evento un éxito.</p>
                     </div>
                 )
-            }
+            },
+            
         ]
     };
 
     const numberOfTabs = tabs[currentOption].length;
 
     useEffect(() => {
-        document.documentElement.style.setProperty('--number-of-tabs', numberOfTabs);
+        console.log('Number of tabs:', numberOfTabs);
+        document.documentElement.style.setProperty('--tab-count', numberOfTabs);
+
+        const tabsContainer = document.querySelector(`.${styles.tabs}`);
+        if (numberOfTabs === 10) {
+            tabsContainer.classList.add(styles.option1);
+        } else {
+            tabsContainer.classList.remove(styles.option1);
+        }
     }, [currentOption, numberOfTabs]);
+
+    const handleToggle = () => {
+        setCurrentOption(currentOption === 'option1' ? 'option2' : 'option1');
+        setActiveTab(1); // Reset the active tab to the first tab of the new option
+    };
 
     const TabContent = ({ activeTab, tabs }) => {
         const activeTabData = tabs.find(tab => tab.id === activeTab);
@@ -371,18 +356,32 @@ const Schedule = () => {
                     <h2>Tiempo restante para el inicio del evento
                         <span className={styles.optionText}>
                             {currentOption === 'option1'
-                                ? " - Competencia General"
-                                : " - Competencia de Colegios"}
+                                ? " - Competencia General 18/10/24"
+                                : " - Competencia de Colegios 17/10/24"}
                         </span>
                     </h2>
                 </div>
                 <div className={styles.countdownWrapper}>
-                    <Countdown targetDate={currentOption === 'option1' ? targetDat_1 : targetDat_2} />
+                    <Countdown key={currentOption} targetDate={currentOption === 'option1' ? targetDat_1 : targetDat_2} />
                 </div>
             </div>
+
+            <div className={styles.toggleSwitch}>
+                <input
+                    type="checkbox"
+                    className={styles.toggleSwitchInput}
+                    id="toggleSwitch"
+                    checked={currentOption === 'option2'}
+                    onChange={handleToggle}
+                />
+                <label className={styles.toggleSwitchLabel} htmlFor="toggleSwitch">
+                    <span className={styles.toggleSwitchInner}></span>
+                    <span className={styles.toggleSwitchSwitch}></span>
+                </label>
+            </div>
+
             <div className={styles.boton}>
                 <Button label={currentOption === 'option1' ? "Descargar Calendario" : "Descargar Calendario Colegio"} downloadLink={currentOption === 'option1' ? "/CronogramaCompetencia.pdf" : "/CronogramaCompetencia_Colegios.pdf"} />
-                {/* <Button label="Descargar Calendario Colegios" downloadLink={"/CronogramaCompetencia_Colegios.pdf"} /> */}
             </div>
             <div className={styles.popup}>
                 <div className={styles.tabs}>
