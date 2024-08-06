@@ -13,8 +13,8 @@ const Footer = () => {
         </div>
         <div className={styles.contactInfo}>
           <p>Contacto: ginvestigacioneysi@unillanos.edu.co</p>
-          <p>Whatsapp: +57 310 784 6595</p>
-        </div>
+          <p>Whatsapp: +57 313 442 6721</p>
+        </div> 
       </div>
     </footer>
   );

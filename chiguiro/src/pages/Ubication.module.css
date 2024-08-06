@@ -39,6 +39,19 @@
   border-radius: 10px; /* Bordes redondeados para el mapa */
 }
 
+/* Media queries para ajustar los márgenes en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .mapContainer {
+    margin: 1%; /* Menor margen en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .mapContainer {
+    margin: 0.5%; /* Aún menor margen en pantallas muy pequeñas */
+  }
+}
+
 .recenter-button-container {
   display: flex;
   justify-content: center;
