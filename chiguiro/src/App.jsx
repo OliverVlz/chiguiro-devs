@@ -7,6 +7,7 @@ import AwardsFutbol from './pages/Carp_AwardsFutbol/AwardsFutbol';
 import Schedule from './pages/Schedule';
 import Contact from './pages/Contact';
 import Ubication from './pages/Ubication';
+import OrganizersSponsors from './pages/OrganizersSponsors'; // Importar el nuevo componente
 import Footer from './components/Footer';
 import './index.css';
 
@@ -22,8 +23,9 @@ const App = () => {
         <Schedule />
         <Ubication />
         <Contact />
+        <OrganizersSponsors /> {}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
