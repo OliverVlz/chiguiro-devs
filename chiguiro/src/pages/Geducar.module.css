@@ -5,7 +5,7 @@
     justify-content: center;
     height: 100vh;
     gap: 20px;
-    background-color: #f0f0f0; /* Fondo claro para mejorar la visualización */
+    background: linear-gradient(180deg, #A6A6A6, #FFFFFF);
   }
   
   .button {
