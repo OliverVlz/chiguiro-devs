@@ -1,7 +1,6 @@
 .scheduleSection {
   background: linear-gradient(180deg, #FFFFFF, #A6A6A6);
   padding: 50px 20px;
-  border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
