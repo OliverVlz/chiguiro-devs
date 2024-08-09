@@ -46,9 +46,13 @@
   color: #0000ff; /* Cambia el color del texto */
 }
 
-@media (max-width: 600px) {
-  .titleContainer h1, .titleContainer h2 {
+@media (max-width: 767px) {
+  .titleContainer h1{
     font-size: clamp(0.8rem, 5vw, 1.5rem); /* Reducción significativa para pantallas pequeñas */
+    padding: 3px 6px; /* Reducción del padding */
+  }
+  .titleContainer h2{
+    font-size: clamp(0.8rem, 4vw, 1.5rem); /* Reducción significativa para pantallas pequeñas */
     padding: 3px 6px; /* Reducción del padding */
   }
 }
