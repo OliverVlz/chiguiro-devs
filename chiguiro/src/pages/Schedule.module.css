@@ -261,3 +261,34 @@
 .blinkingText {
   animation: blink 1s infinite; /* Blink every second */
 }
+
+.tabSwitcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.tabButton {
+  background-color: #e0e0e0;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  font-weight: bold;
+  color: #4CAF50;
+  font-size: 1.2rem;
+  user-select: none; /* Prevent text selection */
+}
+
+.tabButton:hover {
+  background-color: #d3d3d3;
+}
+
+.tabButton.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 2px solid #4CAF50;
+}

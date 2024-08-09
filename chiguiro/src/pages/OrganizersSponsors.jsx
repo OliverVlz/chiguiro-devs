@@ -8,7 +8,9 @@ const sponsors = [
   { name: 'Mesa de trabajo', src: '/Sponsors/sasoftco.png' },
   { name: 'Enciso Systems', src: '/Sponsors/enciso-systems-logo-r-600.png' },
   { name: 'LogoSkytech', src: '/Sponsors/LogoSkytech.jpeg' },
-  { name: 'Ignicion Games', src: '/Sponsors/Ignicion Games - Logo.png' }
+  { name: 'Ignicion Games', src: '/Sponsors/Ignicion Games - Logo.png' },
+  { name: 'Lexa', src: '/Sponsors/logolexa.png' },
+  { name: 'Smartech', src: '/Sponsors/SMARTECH_LOGO-1.png' }
 ];
 
 // Lista de organizadores con sus rutas relativas
