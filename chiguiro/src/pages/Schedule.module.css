@@ -1,28 +1,53 @@
-/* Schedule.module.css */
 .scheduleSection {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh; /* Ajusta según tus necesidades */
-  background: linear-gradient(to bottom, #fdfdfd, #A6A6A6);
-  font-family: monospace;
-  padding: 16px;
-  box-sizing: border-box;
-  overflow: auto;
-
+  background: linear-gradient(180deg, #FFFFFF, #A6A6A6);
+  padding: 50px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
+.titleContainer {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
 
+.titleContainer h1 {
+  font-size: clamp(1.2rem, 5vw, 2.5rem); /* Más dinámico y adaptable */
+  color: white; /* Color del texto */
+  background-color: red; /* Fondo rojo */
+  padding: 5px 10px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-bottom: 5px; /* Espacio inferior */
+}
 
-/* ... Toggle Switch ... */
+.highlight {
+  text-decoration: bold; /* Subraya el texto */
+  font-weight: bold; /* Opción: hacer el texto en negrita */
+  color: #ff4081; /* Opción: cambiar el color del texto */
+  background-color: yellow; /* Opción: agregar un fondo resaltado */
+  padding: 0 2px; /* Un poco de padding para el fondo */
+}
 
-.toggleSwitch {
-  position: relative;
-  width: 6rem;
-  display: inline-block;
-  text-align: left;
+.countdownContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.countdownExplanation h2 {
+  font-size: 1.75rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.toggleSwitchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .toggleSwitchInput {
@@ -30,291 +55,168 @@
 }
 
 .toggleSwitchLabel {
-  display: block;
-  overflow: hidden;
+  position: relative;
+  width: 180px; /* Increased width to fully accommodate text */
+  height: 55px; /* Increased height for better visibility */
+  background-color: #e0e0e0;
+  border-radius: 30px; /* Increase radius to match new height */
   cursor: pointer;
-  border: 2px solid #ccc;
-  border-radius: 20px;
-}
-
-.toggleSwitchInner {
-  display: block;
-  width: 200%;
-  margin-left: -100%;
-  transition: margin 0.3s ease-in-out;
-}
-
-.toggleSwitchInner:before,
-.toggleSwitchInner:after {
-  display: block;
-  float: left;
-  width: 50%;
-  height: 26px;
-  padding: 0;
-  line-height: 26px;
-  font-size: 12px;
-  color: white;
-  font-family: Trebuchet, Arial, sans-serif;
-  font-weight: bold;
-  box-sizing: border-box;
-}
-
-.toggleSwitchInner:before {
-  content: "General";
-  padding-left: 10px;
-  background-color: #2f2f2f;
-  color: #fff;
-}
-
-.toggleSwitchInner:after {
-  content: "Colegios";
-  padding-right: 10px;
-  background-color: #3498db;
-  color: #fff;
-  text-align: right;
-}
-
-.toggleSwitchSwitch {
-  display: block;
-  width: 18px;
-  margin: 4px;
-  background: #fff;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 64px;
-  border: 2px solid #ccc;
-  border-radius: 20px;
-  transition: all 0.3s ease-in-out;
-}
-
-.toggleSwitchInput:checked + .toggleSwitchLabel .toggleSwitchInner {
-  margin-left: 0;
-}
-
-.toggleSwitchInput:checked + .toggleSwitchLabel .toggleSwitchSwitch {
-  right: 0px;
-}
-
-
-
-
-.countdownContainer {
+  transition: background-color 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem; 
-  margin-bottom: 1rem;
-}
-
-.countdownWrapper {
-  margin-left: 1rem; 
-}
-
-.countdownExplanation {
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 900;
-  line-height: 1;
-  color: #525d6f;
-  max-width: 18rem;
-  line-height: 1.2;
-  text-align: right;
-}
-
-.title {
-  width: 100%;
-  text-align: center;
-}
-
-.title h1{
-  font-size: clamp(1.2rem, 5vw, 2.5rem); /* Más dinámico y adaptable */
-  color: white;
-  background-color: red;
-  padding: 5px 10px; /* Menor padding para dispositivos pequeños */
-  border-radius: 5px; /* Bordes más sutiles */
-  margin-bottom: 5px; /* Menor separación entre elementos*/
-}
-
-.boton {
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-.popup {
-  width: 90%;
-  height: 80%;
-  min-height: 470px;
-  max-height: 470px;
-  border-radius: 15px;
+  padding: 0 20px; /* More padding for inner spacing */
   box-sizing: border-box;
-  border: 0.3em solid #50494944;
-  background-color: #EFE9E0;
-  overflow: hidden;
-  box-shadow: 16px 16px 48px #2e364330;
-  display: flex;
-  margin-bottom: 4em;
+  font-weight: bold;
+  color: #4CAF50;
+  font-size: 1.2rem;
 }
 
-.tabs {
-  flex: 0 0 300px;
-  width: 100%;
-  max-width: 40%;
-  height: 110%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: relative;
-  /* padding-left: 1em; */
-  /* padding-top: 4em; */
-}
-
-.tabs label {
-  font-size: 0.8em;
-  font-weight: 600;
-  cursor: pointer;
-  color: #000000;
-  opacity: 0.4;
-  transition: opacity 0.4s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.2;
-  width: 100%;
-  height: 3em;
-  text-align: left;
-  z-index: 100;
-  user-select: none;
-  text-transform: uppercase;
-  /* padding-left: 4em; */
-  padding: 2em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  box-sizing: border-box;
-}
-
-.tabs label p {
-  margin: 0;
-  padding: 0;
-}
-
-.tabs label p:first-child {
-  /* font-size: 0.8em; */
-  font-size: clamp(0.6rem, 1.7vw, 1.2rem);
-}
-
-.tabs label p:last-child {
-  /* font-size: 0.8em; */
-  font-size: clamp(0.5rem, 1vw, 0.6rem) !important; 
+.optionTexto {
   color: red;
 }
 
-.tabContent {
-  flex: 1;
-  padding-left: 3vw;
-  padding-right: 3vw;
-  overflow-y: auto;
-  font-size: 0.8rem;
-  text-overflow: ellipsis;
-  text-align: justify;
-  text-justify: inter-word;
-}
-.tabContent h1 {
-  font-size: clamp(1.2rem, 1vw, 2rem) !important; 
-  font-weight: 600;
-  color: #525d6f;
+
+.toggleSwitchLabel {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-weight: bold;
+  color: black;
+  font-size: 1.2rem;
+  border: 3px solid black;
+  user-select: none; /* Prevent text selection */
 }
 
-.tabContent h2 {
-  font-size: clamp(1.1rem, 1vw, 1.8rem) !important; 
-  font-weight: 400;
-  color: #525d6f;
+/* Hover effect */
+.toggleSwitchLabel:hover {
+  background-color: red; /* Slightly darker red pastel for hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow on hover */
 }
 
-.tabContent h3 {
-  font-size: clamp(1.2rem, 1vw, 2rem) !important; 
-  font-weight: 600;
-  color: #ff0101;
-
+.toggleSwitchLabel .toggleSwitchInner {
+  position: absolute;
+  top: 50%;
+  left: 8px; /* Adjusted for better positioning */
+  width: 35px; /* Larger size for the toggle button */
+  height: 35pxpx; /* Larger size for the toggle button */
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: left 0.3s ease, background-color 0.3s ease;
+  z-index: 2;
+  user-select: none; /* Prevent text selection */
 }
 
-.tabContent p {
-  font-size: clamp(0.8rem, 0.9vw, 1.1rem) !important; 
-  font-weight: 200;
-  color: #3e4653;
-}
-.tabContent img {
-  width: auto;
-  height: 3.7rem;
-  
+.toggleSwitchInput:checked + .toggleSwitchLabel .toggleSwitchInner {
+  left: calc(100% - 53px); /* Adjusted for larger switch */
+  background-color: #4CAF50;
 }
 
-.tabs input[type="radio"] {
+.toggleSwitchInput:checked + .toggleSwitchLabel .optionText .optionTexto {
+  color: blue; /* Change text color when toggled */
+}
+
+
+.boton {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.popup {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.tabs label {
+  background-color: #E5E5E5;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  user-select: none; /* Prevent text selection */
+}
+
+.tabs input {
   display: none;
 }
 
-.tabs label:hover,
-.tabs input[type="radio"]:checked + label {
-  opacity: 2;
+.tabs input:checked + label {
+  background-color: #4CAF50;
+  color: white;
+  border: 2px solid #4CAF50;
+}
+
+.tabs label:hover {
+  color: #4CAF50;
+  background-color: #e0e0e0;
+  border: 2px solid #4CAF50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .marker {
   position: absolute;
-  width: 100%;
-  height: 200%;
-  display: flex;
-  flex-direction: column;
-  top: -100%;
-  left: 0;
-  transition: transform 0.2s ease-in-out;
+  bottom: -5px;
+  height: 4px;
+  background-color: #4CAF50;
+  border-radius: 2px;
+  transition: left 0.3s ease, width 0.3s ease;
 }
 
-
-.top,
-.bottom {
-  background-color: #ebf0f4;
-  box-shadow: 32px 32px 48px #2e364315;
+.tabContent {
+  padding: 20px;
+  text-align: left;
 }
 
-.top {
-  height: calc(50% + 0.4em);
-  margin-bottom: auto;
-  border-radius: 0 0 1em 0;
+.tabContent h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
-.bottom {
-  height: calc(50% - 3.5em);
-  border-radius: 0 1em 0 0;
+.tabContent h3 {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 10px;
 }
 
+.tabContent p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
 
+.tabContent ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
 
 .images {
-  width: auto;
-  height: 30vw;
-  margin-bottom: 15px;
-  padding-left: 2rem;
-  border-radius: 8px;
-  text-align: center;
+  width: 50%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-.optionText {
-  font-size: 0.8em;
-  color: #ff0000; /* O cualquier color que prefieras */
-  margin-left: 10px;
-}
-
-
-.tabs input[type="radio"]:nth-of-type(1):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 0)); }
-.tabs input[type="radio"]:nth-of-type(2):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 1)); }
-.tabs input[type="radio"]:nth-of-type(3):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 2)); }
-.tabs input[type="radio"]:nth-of-type(4):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 3)); }
-.tabs input[type="radio"]:nth-of-type(5):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 4)); }
-.tabs input[type="radio"]:nth-of-type(6):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 5)); }
-.tabs input[type="radio"]:nth-of-type(7):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 6)); }
-
-.tabs.option1 input[type="radio"]:nth-of-type(8):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 7)); }
-.tabs.option1 input[type="radio"]:nth-of-type(9):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 8)); }
-.tabs.option1 input[type="radio"]:nth-of-type(10):checked ~ .marker { transform: translateY(calc(50% / var(--tab-count) * 9)); }

@@ -41,15 +41,9 @@ const Buttons = () => {
   return (
     <div className={styles['buttons-container']}>
       <div className={styles['button-wrapper']} ref={menuRef}>
-        <button className={styles['menu-button']} onClick={toggleMenu}>
+        <button className={styles['menu-button']} onClick={() => window.open('https://forms.gle/9shq4czv8t65yyrp9', '_blank')}>
           Inscripción
         </button>
-        {showMenu && (
-          <div className={styles['menu-options']}>
-            <p onClick={() => handleItemClick('https://www.youtube.com')}>Categoria Avanzado</p>
-            <p onClick={() => handleItemClick('https://www.otro-enlace.com')}>Categoria Junior</p>
-          </div>
-        )}
       </div>
 
       <div className={styles['button-wrapper']} ref={textRef}>
