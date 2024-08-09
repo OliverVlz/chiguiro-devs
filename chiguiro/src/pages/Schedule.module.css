@@ -76,6 +76,14 @@
   color: red;
 }
 
+@keyframes pulse {
+  0%, 100% {
+    transform: translateY(-50%) scale(1); /* Normal size */
+  }
+  50% {
+    transform: translateY(-50%) scale(1.2); /* Slightly larger size */
+  }
+}
 
 .toggleSwitchLabel {
   position: relative;
@@ -105,19 +113,20 @@
 .toggleSwitchLabel .toggleSwitchInner {
   position: absolute;
   top: 50%;
-  left: 8px; /* Adjusted for better positioning */
-  width: 35px; /* Larger size for the toggle button */
-  height: 35pxpx; /* Larger size for the toggle button */
-  background-color: #fff;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
   border-radius: 50%;
   transform: translateY(-50%);
   transition: left 0.3s ease, background-color 0.3s ease;
   z-index: 2;
   user-select: none; /* Prevent text selection */
+  animation: pulse 1.5s infinite ease-in-out; /* Apply pulse animation */
 }
 
 .toggleSwitchInput:checked + .toggleSwitchLabel .toggleSwitchInner {
-  left: calc(100% - 53px); /* Adjusted for larger switch */
+  left: calc(100% - 30px); /* Adjusted for larger switch */
   background-color: #4CAF50;
 }
 
@@ -219,4 +228,36 @@
   margin-top: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.parentContainer { /* Assuming there's a parent container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensure the container fills the space */
+  width: 100%;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+.toggleSwitchContainer, .boton {
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    opacity: 0; /* Invisible */
+  }
+}
+
+.blinkingText {
+  animation: blink 1s infinite; /* Blink every second */
 }

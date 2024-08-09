@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './Schedule.module.css';
 import Button from './Carp_Categories/Button';
 import Countdown from '../components/countdown';
@@ -10,6 +10,7 @@ const Schedule = () => {
     const targetDat_1 = new Date(2024, 10, 18, 0, 0, 0);
     const targetDat_2 = new Date(2024, 10, 17, 0, 0, 0);
     const [currentOption, setCurrentOption] = useState('option1');
+    const contentRef = useRef(null);
 
     useEffect(() => {
         const fetchScheduleData = async () => {
@@ -332,17 +333,29 @@ const Schedule = () => {
 
     const handleToggle = () => {
         setCurrentOption(currentOption === 'option1' ? 'option2' : 'option1');
-        setActiveTab(1); // Reset the active tab to the first tab of the new option
+        setActiveTab(1);
     };
 
-    const TabContent = ({ activeTab, tabs }) => {
+    const handleTabChange = (tabId) => {
+        setActiveTab(tabId);
+        setTimeout(() => {
+            if (contentRef.current) {
+                const yOffset = -70; // Offset to adjust for fixed headers, etc.
+                const yPosition = contentRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    
+                window.scrollTo({ top: yPosition, behavior: 'smooth' });
+            }
+        }, 0);
+    };    
+
+    const TabContent = ({ activeTab, tabs, contentRef }) => {
         const activeTabData = tabs.find(tab => tab.id === activeTab);
         return (
-            <div className={styles.tabContent}>
+            <div ref={contentRef} className={styles.tabContent}>
                 {activeTabData?.content}
             </div>
         );
-    };
+    };    
 
     return (
         <section id="cronograma" className={styles.scheduleSection}>
@@ -373,27 +386,27 @@ const Schedule = () => {
                 </div>
             </div>
 
-            <div className={styles.toggleSwitchContainer}>
-                <input
-                    type="checkbox"
-                    className={styles.toggleSwitchInput}
-                    id="toggleSwitch"
-                    checked={currentOption === 'option2'}
-                    onChange={handleToggle}
-                />
-                <label className={styles.toggleSwitchLabel} htmlFor="toggleSwitch">
-                    <span className={styles.toggleSwitchInner}></span>
-                    <span className={styles.toggleSwitchSwitch}></span>
-                    <span className={styles.stateIndicator}>
-                        {currentOption === 'option1' ? "🏫 " : "🚀"} {/* Using emojis for state */}
-                    </span>
-                    <span className={styles.optionText}>{currentOption === 'option1' ? " General" : " Colegios"}</span>
-                </label>
+            <div className={styles.buttonGroup}>
+                <div className={styles.toggleSwitchContainer}>
+                    <input
+                        type="checkbox"
+                        className={styles.toggleSwitchInput}
+                        id="toggleSwitch"
+                        checked={currentOption === 'option2'}
+                        onChange={handleToggle}
+                    />
+                    <label className={styles.toggleSwitchLabel} htmlFor="toggleSwitch">
+                        <span className={styles.toggleSwitchInner}></span>
+                        <span className={styles.toggleSwitchSwitch}></span>
+                        <span className={styles.optionText}>{currentOption === 'option1' ? "General" : "Colegios"}</span>
+                    </label>
+                </div>
+
+                <div className={styles.boton}>
+                    <Button label={currentOption === 'option1' ? "Descargar Calendario General" : "Descargar Calendario Colegio"} downloadLink={currentOption === 'option1' ? "/CronogramaCompetencia.pdf" : "/CronogramaCompetencia_Colegios.pdf"} />
+                </div>
             </div>
 
-            <div className={styles.boton}>
-                <Button label={currentOption === 'option1' ? "Descargar Calendario General" : "Descargar Calendario Colegio"} downloadLink={currentOption === 'option1' ? "/CronogramaCompetencia.pdf" : "/CronogramaCompetencia_Colegios.pdf"} />
-            </div>
 
             <div className={styles.popup}>
                 <div className={styles.tabs}>
@@ -404,7 +417,7 @@ const Schedule = () => {
                                 id={`tab${tab.id}`}
                                 name="tab"
                                 checked={activeTab === tab.id}
-                                onChange={() => setActiveTab(tab.id)}
+                                onChange={() => handleTabChange(tab.id)} // Modified here
                                 style={{ '--tab-index': index + 1 }}
                             />
                             <label htmlFor={`tab${tab.id}`}>{tab.label}</label>
@@ -415,7 +428,7 @@ const Schedule = () => {
                         <div className={styles.bottom}></div>
                     </div>
                 </div>
-                <TabContent activeTab={activeTab} tabs={tabs[currentOption]} />
+                <TabContent activeTab={activeTab} tabs={tabs[currentOption]} contentRef={contentRef} />
             </div>
         </section>
     );
