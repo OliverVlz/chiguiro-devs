@@ -32,7 +32,7 @@ const Geducar = () => {
               Una vez realizada la inscripción en <a href="https://geducar.unillanos.edu.co/evento-detalle/125/" target="_blank" rel="noopener noreferrer">https://geducar.unillanos.edu.co</a> se debe enviar un correo a <a href="mailto:ginvestigacioneysi@unillanos.edu.co">ginvestigacioneysi@unillanos.edu.co</a> con los siguientes datos:
             </p>
             <ul>
-              <li>Asunto: Generación recibo de pago trabajo ID (para el ID revisar en: <a href="https://geducar.unillanos.edu.co/evento-detalle/125/" target="_blank" rel="noopener noreferrer">Participante METAROBOTS 2024</a>)</li>
+              <li>Asunto: Generación recibo de pago competidor ID (para el ID revisar en: <a href="https://geducar.unillanos.edu.co/evento-detalle/125/" target="_blank" rel="noopener noreferrer">Participante METAROBOTS 2024</a>)</li>
               <li>Nombres y apellidos.</li>
               <li>Número de cédula, lugar de expedición.</li>
               <li>Teléfono.</li>

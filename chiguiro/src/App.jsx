@@ -24,8 +24,8 @@ const App = () => {
         <Schedule />
         <Ubication />
         <Contact />
-        <OrganizersSponsors />
         <Geducar />
+        <OrganizersSponsors />
       </div>
       <Footer />
     </div>

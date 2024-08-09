@@ -16,7 +16,7 @@ const organizers = [
   { name: 'Unillanos', src: '/Organizers/Unillanos.png' },
   { name: 'EYSI', src: '/Organizers/EYSI.png' },
   { name: 'IEEE', src: '/Organizers/IEEE-Photoroom.png' },
-  { name: 'i-conbot', src: '/Organizers/i-conbot-Photoroom.png' }
+  { name: 'i-conbot', src: '/Organizers/i-CONBOT-1.png' }
 ];
 
 const OrganizersSponsors = () => {
