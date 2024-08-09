@@ -23,10 +23,9 @@
 }
 
 .highlight {
-  text-decoration: bold; /* Subraya el texto */
-  font-weight: bold; /* Opción: hacer el texto en negrita */
-  color: #ff4081; /* Opción: cambiar el color del texto */
-  background-color: yellow; /* Opción: agregar un fondo resaltado */
+  font-weight: bold; /* Negrita */
+  color: #ff4081; /* Color de texto */
+  background-color: yellow; /* Fondo resaltado */
   padding: 0 2px; /* Un poco de padding para el fondo */
 }
 
@@ -43,102 +42,15 @@
   margin-bottom: 10px;
 }
 
-.toggleSwitchContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.toggleSwitchInput {
-  display: none;
-}
-
-.toggleSwitchLabel {
-  position: relative;
-  width: 180px; /* Increased width to fully accommodate text */
-  height: 55px; /* Increased height for better visibility */
-  background-color: #e0e0e0;
-  border-radius: 30px; /* Increase radius to match new height */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px; /* More padding for inner spacing */
-  box-sizing: border-box;
-  font-weight: bold;
-  color: #4CAF50;
-  font-size: 1.2rem;
-}
-
 .optionTexto {
   color: red;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: translateY(-50%) scale(1); /* Normal size */
-  }
-  50% {
-    transform: translateY(-50%) scale(1.2); /* Slightly larger size */
-  }
-}
-
-.toggleSwitchLabel {
-  position: relative;
-  width: 160px;
-  height: 50px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-  box-sizing: border-box;
-  font-weight: bold;
-  color: black;
-  font-size: 1.2rem;
-  border: 3px solid black;
-  user-select: none; /* Prevent text selection */
-}
-
-/* Hover effect */
-.toggleSwitchLabel:hover {
-  background-color: red; /* Slightly darker red pastel for hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow on hover */
-}
-
-.toggleSwitchLabel .toggleSwitchInner {
-  position: absolute;
-  top: 50%;
-  left: 8px;
-  width: 20px;
-  height: 20px;
-  background-color: blue;
-  border-radius: 50%;
-  transform: translateY(-50%);
-  transition: left 0.3s ease, background-color 0.3s ease;
-  z-index: 2;
-  user-select: none; /* Prevent text selection */
-  animation: pulse 1.5s infinite ease-in-out; /* Apply pulse animation */
-}
-
-.toggleSwitchInput:checked + .toggleSwitchLabel .toggleSwitchInner {
-  left: calc(100% - 30px); /* Adjusted for larger switch */
-  background-color: #4CAF50;
-}
-
-.toggleSwitchInput:checked + .toggleSwitchLabel .optionText .optionTexto {
-  color: blue; /* Change text color when toggled */
-}
-
-
 .boton {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  flex-shrink: 1;
+  width: auto; /* Ancho automático para el botón de descarga */
+  max-width: 300px; /* Ancho máximo para evitar que se estire demasiado */
+  margin-top: 10px; /* Margen superior para separación */
 }
 
 .popup {
@@ -166,7 +78,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid transparent;
-  user-select: none; /* Prevent text selection */
+  user-select: none; /* Previene la selección de texto */
 }
 
 .tabs input {
@@ -230,57 +142,34 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.parentContainer { /* Assuming there's a parent container */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%; /* Ensure the container fills the space */
-  width: 100%;
-}
-
-.buttonGroup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px; /* Space between buttons */
-}
-
-.toggleSwitchContainer, .boton {
-  flex-shrink: 0; /* Prevent shrinking */
-}
-
-@keyframes blink {
-  0%, 100% {
-    opacity: 1; /* Fully visible */
-  }
-  50% {
-    opacity: 0; /* Invisible */
-  }
-}
-
-.blinkingText {
-  animation: blink 1s infinite; /* Blink every second */
-}
-
 .tabSwitcher {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  gap: 20px;
+  gap: 10px; /* Espacio entre los elementos */
+  max-width: 600px; /* Ancho máximo para el grupo de botones */
+  margin-left: auto; /* Centrando el contenedor */
+  margin-right: auto; /* Centrando el contenedor */
 }
 
 .tabButton {
+  flex-grow: 0; /* Evita que los botones crezcan demasiado */
+  flex-basis: 45%; /* Los botones ocuparán el 45% del ancho disponible */
+  min-width: 140px; /* Ancho mínimo para los botones */
+  max-width: 200px; /* Ancho máximo para los botones */
   background-color: #e0e0e0;
-  padding: 15px 25px;
+  padding: 15px 20px;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid transparent;
   font-weight: bold;
   color: #4CAF50;
-  font-size: 1.2rem;
-  user-select: none; /* Prevent text selection */
+  font-size: 1.1rem;
+  user-select: none;
+  text-align: center;
 }
 
 .tabButton:hover {
@@ -291,4 +180,18 @@
   background-color: #4CAF50;
   color: white;
   border: 2px solid #4CAF50;
+}
+
+@media (max-width: 768px) {
+  .tabButton {
+    flex-basis: 100%; /* Los botones ocuparán el 100% del ancho disponible en pantallas pequeñas */
+    max-width: none; /* Elimina el ancho máximo en pantallas pequeñas */
+    padding: 10px 15px; /* Reduce el padding en pantallas pequeñas */
+    font-size: 1rem; /* Reduce el tamaño de fuente en pantallas pequeñas */
+  }
+
+  .boton {
+    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    margin-top: 15px; /* Margen superior para separación en pantallas pequeñas */
+  }
 }
