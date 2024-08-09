@@ -21,7 +21,7 @@ const Geducar = () => {
         Registrarme en Geducar
       </button>
       <button className={styles.button} onClick={openModal}>
-        *Leer después de pagar*
+        Despues de realizar el pago de la inscripción
       </button>
 
       {modalOpen && (

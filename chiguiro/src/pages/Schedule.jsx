@@ -1,5 +1,4 @@
-// src/pages/Schedule.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './Schedule.module.css';
 import Button from './Carp_Categories/Button';
 import Countdown from '../components/countdown';
@@ -10,7 +9,8 @@ const Schedule = () => {
     const [scheduleData, setScheduleData] = useState([]);
     const targetDat_1 = new Date(2024, 10, 18, 0, 0, 0);
     const targetDat_2 = new Date(2024, 10, 17, 0, 0, 0);
-    const [currentOption, setCurrentOption] = useState('option1'); // Puedes cambiar 'option1' a 'option2' para probar
+    const [currentOption, setCurrentOption] = useState('option1');
+    const contentRef = useRef(null);
 
     useEffect(() => {
         const fetchScheduleData = async () => {
@@ -321,7 +321,6 @@ const Schedule = () => {
     const numberOfTabs = tabs[currentOption].length;
 
     useEffect(() => {
-        console.log('Number of tabs:', numberOfTabs);
         document.documentElement.style.setProperty('--tab-count', numberOfTabs);
 
         const tabsContainer = document.querySelector(`.${styles.tabs}`);
@@ -332,15 +331,27 @@ const Schedule = () => {
         }
     }, [currentOption, numberOfTabs]);
 
-    const handleToggle = () => {
-        setCurrentOption(currentOption === 'option1' ? 'option2' : 'option1');
-        setActiveTab(1); // Reset the active tab to the first tab of the new option
+    const handleTabChange = (tabId) => {
+        setActiveTab(tabId);
+        setTimeout(() => {
+            if (contentRef.current) {
+                const yOffset = -70; // Offset to adjust for fixed headers, etc.
+                const yPosition = contentRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                window.scrollTo({ top: yPosition, behavior: 'smooth' });
+            }
+        }, 0);
     };
 
-    const TabContent = ({ activeTab, tabs }) => {
+    const handleTabSwitch = (option) => {
+        setCurrentOption(option);
+        setActiveTab(1); // Reset active tab when switching options
+    };
+
+    const TabContent = ({ activeTab, tabs, contentRef }) => {
         const activeTabData = tabs.find(tab => tab.id === activeTab);
         return (
-            <div className={styles.tabContent}>
+            <div ref={contentRef} className={styles.tabContent}>
                 {activeTabData?.content}
             </div>
         );
@@ -348,41 +359,54 @@ const Schedule = () => {
 
     return (
         <section id="cronograma" className={styles.scheduleSection}>
-            <div className={styles.title}>
+            <div className={styles.titleContainer}>
                 <h1>CRONOGRAMA</h1>
             </div>
             <div className={styles.countdownContainer}>
                 <div className={styles.countdownExplanation}>
-                    <h2>Tiempo restante para el inicio del evento
-                        <span className={styles.optionText}>
-                            {currentOption === 'option1'
-                                ? " - Competencia General 18/10/24"
-                                : " - Competencia de Colegios 17/10/24"}
-                        </span>
-                    </h2>
+                    <h2>Tiempo restante para el inicio del evento</h2>
                 </div>
                 <div className={styles.countdownWrapper}>
                     <Countdown key={currentOption} targetDate={currentOption === 'option1' ? targetDat_1 : targetDat_2} />
                 </div>
+                <div className={styles.countdownExplanation}>
+                    <h2>
+                        <span className={styles.optionTexto}>
+                            {currentOption === 'option1' ? (
+                                <>
+                                    Competencia General <span className={styles.highlight}>Viernes</span> 18 de Octubre de 2024
+                                </>
+                            ) : (
+                                <>
+                                    Competencia de Colegios <span className={styles.highlight}>Jueves</span> 17 de Octubre de 2024
+                                </>
+                            )}
+                        </span>
+                    </h2>
+                </div>
             </div>
 
-            <div className={styles.toggleSwitch}>
-                <input
-                    type="checkbox"
-                    className={styles.toggleSwitchInput}
-                    id="toggleSwitch"
-                    checked={currentOption === 'option2'}
-                    onChange={handleToggle}
-                />
-                <label className={styles.toggleSwitchLabel} htmlFor="toggleSwitch">
-                    <span className={styles.toggleSwitchInner}></span>
-                    <span className={styles.toggleSwitchSwitch}></span>
-                </label>
+            <div className={styles.tabSwitcher}>
+                <button
+                    className={`${styles.tabButton} ${currentOption === 'option1' ? styles.active : ''}`}
+                    onClick={() => handleTabSwitch('option1')}
+                >
+                    General
+                </button>
+                <button
+                    className={`${styles.tabButton} ${currentOption === 'option2' ? styles.active : ''}`}
+                    onClick={() => handleTabSwitch('option2')}
+                >
+                    Colegios
+                </button>
+                <div className={styles.boton}>
+                    <Button 
+                        label={currentOption === 'option1' ? "Descargar Calendario General" : "Descargar Calendario Colegio"} 
+                        downloadLink={currentOption === 'option1' ? "/CronogramaCompetencia.pdf" : "/CronogramaCompetencia_Colegios.pdf"} 
+                    />
+                </div>
             </div>
 
-            <div className={styles.boton}>
-                <Button label={currentOption === 'option1' ? "Descargar Calendario" : "Descargar Calendario Colegio"} downloadLink={currentOption === 'option1' ? "/CronogramaCompetencia.pdf" : "/CronogramaCompetencia_Colegios.pdf"} />
-            </div>
             <div className={styles.popup}>
                 <div className={styles.tabs}>
                     {tabs[currentOption].map((tab, index) => (
@@ -392,21 +416,19 @@ const Schedule = () => {
                                 id={`tab${tab.id}`}
                                 name="tab"
                                 checked={activeTab === tab.id}
-                                onChange={() => setActiveTab(tab.id)}
-                                style={{'--tab-index': index+1}}
+                                onChange={() => handleTabChange(tab.id)}
+                                style={{ '--tab-index': index + 1 }}
                             />
                             <label htmlFor={`tab${tab.id}`}>{tab.label}</label>
                         </React.Fragment>
                     ))}
-                    <div className={styles.marker}>
+                    <div className={styles.marker} style={{ left: `${(activeTab - 1) * (100 / numberOfTabs)}%`, width: `${100 / numberOfTabs}%` }}>
                         <div className={styles.top}></div>
                         <div className={styles.bottom}></div>
                     </div>
                 </div>
-                <TabContent activeTab={activeTab} tabs={tabs[currentOption]} />
+                <TabContent activeTab={activeTab} tabs={tabs[currentOption]} contentRef={contentRef} />
             </div>
-
-
         </section>
     );
 };

@@ -24,7 +24,6 @@ const App = () => {
         <Schedule />
         <Ubication />
         <Contact />
-        <Geducar />
         <OrganizersSponsors />
       </div>
       <Footer />
