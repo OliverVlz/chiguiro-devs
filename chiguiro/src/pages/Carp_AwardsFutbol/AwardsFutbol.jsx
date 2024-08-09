@@ -7,7 +7,7 @@ const AwardsFutbol = () => {
       
       <div className={`${styles.column} ${styles.textContent}`}>
         <div className={styles.titleContainer}>
-            <h3>FUTBOLRC</h3>
+            <h3>FUTBOL RC</h3>
             <h4>1er Lugar: 500,000 pesos</h4>
             <p>El primer lugar de cada categoría se llevará un impresionante bono de 500.000 pesos. 
                 Este premio reconoce la excelencia, el esfuerzo y la dedicación de los campeones en FUTBOLRC.</p>
