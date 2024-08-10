@@ -8,8 +8,10 @@ const Countdown = ({targetDate}) => {
   useEffect(() => {
     const updateCountdown = () => {
       const currentDate = new Date();
+      console.log(currentDate);
       // const difference = targetDate - currentDate;
-      const difference = new Date(targetDate - currentDate);
+      console.log(targetDate);
+      const difference = targetDate.getTime() - currentDate.getTime();
       if (difference <= 0) {
         setTimeRemaining('¡YA ES HORA, PONTE A PRUEBA!');
         return;
@@ -22,10 +24,10 @@ const Countdown = ({targetDate}) => {
 
       setTimeRemaining(`${days}d ${hours}h ${minutes}m ${seconds}s`);
     };
+    updateCountdown();
 
-    const countdownInterval = setInterval(updateCountdown, 1000);
-
-    return () => clearInterval(countdownInterval);
+    const timer = setInterval(updateCountdown, 1000);
+    return () => clearInterval(timer);
   }, []);
 
   return (

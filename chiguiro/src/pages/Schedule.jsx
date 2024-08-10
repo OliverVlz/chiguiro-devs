@@ -7,8 +7,8 @@ import axios from 'axios';
 const Schedule = () => {
     const [activeTab, setActiveTab] = useState(1);
     const [scheduleData, setScheduleData] = useState([]);
-    const targetDat_1 = new Date(2024, 10, 18, 0, 0, 0);
-    const targetDat_2 = new Date(2024, 10, 17, 0, 0, 0);
+    const targetDat_1 = new Date(2024, 9, 18, 0, 0, 0);
+    const targetDat_2 = new Date(2024, 9, 17, 0, 0, 0);
     const [currentOption, setCurrentOption] = useState('option1');
     const contentRef = useRef(null);
 
