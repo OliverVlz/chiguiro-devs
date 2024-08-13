@@ -9,7 +9,7 @@ const Schedule = () => {
     const [scheduleData, setScheduleData] = useState([]);
     const targetDat_1 = new Date(2024, 9, 19, 7, 0, 0);
     const targetDat_2 = new Date(2024, 9, 18, 7, 0, 0);
-    const [currentOption, setCurrentOption] = useState('option1');
+    const [currentOption, setCurrentOption] = useState('option2');
     const contentRef = useRef(null);
 
     useEffect(() => {
@@ -76,7 +76,7 @@ const Schedule = () => {
                         <h1>Apertura de Pistas para Pruebas</h1>
                         <h3>9:30 - 10:30 am</h3>
                         <p>Después de la ceremonia inaugural, las pistas estarán abiertas para que los participantes puedan familiarizarse con el área de competencia y realizar pruebas libres. Es una excelente oportunidad para ajustar los últimos detalles antes del inicio oficial de las competencias.</p>
-                        <img src="/Pistas-remove.webp" alt="Pistas" className={styles.images} />
+                        {/* <img src="/Pistas-remove.webp" alt="Pistas" className={styles.images} /> */}
                     </div>
                 )
             },
@@ -122,15 +122,15 @@ const Schedule = () => {
             {
                 id: 6, label: (
                     <div>
-                        <p>SumoRC-Futbol-Velocista</p>
+                        <p>Sumo(Auto/RC)-Velocista</p>
                         <p> 2:30 - 3:30 pm </p>
                     </div>
                 ),
                 content: (
                     <div>
-                        <h1>Inicio Competencia - Sumo RC, Futbol y Velocista</h1>
+                        <h1>Inicio Competencia - Sumo RC, Sumo Autonomo y Velocista</h1>
                         <h3>2:30 - 3:30 pm</h3>
-                        <p>Las competencias de Sumo RC, Futbol y Velocista darán inicio. Al igual que en la mañana, se desarrollarán en varias fases:</p>
+                        <p>Las competencias de Sumo RC, Sumo Autonomo y Velocista darán inicio. Se desarrollarán en varias fases:</p>
                         <img src="/Sumo-Fut-Vel.png" alt="Sumo, Futbol, Velocista" className={styles.images} />
                         <ul>
                             <li>Eliminatorias de Grupo</li>
@@ -225,8 +225,7 @@ const Schedule = () => {
                         <h1>Registro</h1>
                         <h2>Registro - Centro Comercial Viva</h2>
                         <h3>9:00 - 9:30 am</h3>
-                        <p>¡Bienvenidos! Los participantes deben ingresar y registrarse en el Coliseo de la Universidad de los Llanos. Por favor, asegúrese de llegar a tiempo para completar el proceso de registro y recibir su kit de bienvenida.</p>
-                    
+                        <p>¡Bienvenidos! Los participantes deben ingresar y registrarse en el centro comercial Viva Villavicencio. Por favor, asegúrese de llegar a tiempo para completar el proceso de registro y recibir su kit de bienvenida.</p>
                     </div>
                 )
             },
@@ -256,8 +255,8 @@ const Schedule = () => {
                     <div>
                         <h1>Apertura de Pistas para Pruebas</h1>
                         <h3>11:30 - 12:30 am</h3>
-                        <p>Después de la ceremonia inaugural, las pistas estarán abiertas para que los participantes puedan familiarizarse con el área de competencia y realizar pruebas libres. Es una excelente oportunidad para ajustar los últimos detalles antes del inicio oficial de las competencias.</p>
-                        <img src="/Pistas-remove.webp" alt="Pistas" className={styles.images} />                   
+                        <p>Después de la ceremonia inaugural, las pistas de FUTBOL RC estarán abiertas para que los participantes puedan familiarizarse con el área de competencia y realizar pruebas libres. Es una excelente oportunidad para ajustar los últimos detalles antes del inicio oficial de las competencias.</p>
+                        {/* <img src="/Pistas-remove.webp" alt="Pistas" className={styles.images} />    */}                
                     </div>
                 )
             },
@@ -272,8 +271,7 @@ const Schedule = () => {
                     <div>
                         <h1>Inicio Competencia - Futbol Colegios</h1>
                         <h3>12:30 - 2:30 pm </h3>
-                        <p>La competencia se desarrollará en varias fases para determinar los ganadores de las categorías Minisumo y Futbol Colegios. Las fases son las siguientes:</p>
-                        <img src="/Sumo-Fut.png" alt="Sumo, Futbol" className={styles.images} />
+                        <p>La competencia se desarrollará en varias fases para determinar los ganadores de Futbol Colegios. Las fases son las siguientes:</p>
                         <ul>
                             <li>Eliminatorias de Grupo</li>
                             <li>Clasificatoria a Octavos de Final</li>
@@ -281,6 +279,7 @@ const Schedule = () => {
                             <li>Semifinales</li>
                             <li>Finales</li>
                         </ul>
+                        <img src="/Categories_Imagenes/FUTBOLRC1.png" alt="Sumo, Futbol" className={styles.images} />
                     </div>
                 )
             },
@@ -388,20 +387,20 @@ const Schedule = () => {
 
             <div className={styles.tabSwitcher}>
                 <button
-                    className={`${styles.tabButton} ${currentOption === 'option1' ? styles.active : ''}`}
-                    onClick={() => handleTabSwitch('option1')}
-                >
-                    General
-                </button>
-                <button
                     className={`${styles.tabButton} ${currentOption === 'option2' ? styles.active : ''}`}
                     onClick={() => handleTabSwitch('option2')}
                 >
                     Colegios
                 </button>
+                <button
+                    className={`${styles.tabButton} ${currentOption === 'option1' ? styles.active : ''}`}
+                    onClick={() => handleTabSwitch('option1')}
+                >
+                    General
+                </button>
                 <div className={styles.boton}>
                     <Button 
-                        label={currentOption === 'option1' ? "Descargar Calendario General" : "Descargar Calendario Colegio"} 
+                        label={currentOption === 'option1' ? "Descargar Calendario General" : "Descargar Calendario Colegios"} 
                         downloadLink={currentOption === 'option1' ? "/CronogramaCompetencia.pdf" : "/CronogramaCompetencia_Colegios.pdf"} 
                     />
                 </div>
