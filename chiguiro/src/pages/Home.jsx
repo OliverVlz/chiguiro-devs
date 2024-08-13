@@ -10,9 +10,9 @@ const Home = () => {
   return (
     <section id="inicio" className={styles.homeSection}>
       <div className={styles.content}>
-        <div className={styles.logoContainer}>
+{/*         <div className={styles.logoContainer}>
           <img src={logo} alt="Logo Metabots" className={styles.logo} />
-        </div>
+        </div> */}
         <div className={styles.textContainer}>
           <h1 className={styles.title}>METAROBOTS</h1>
           <h2 className={styles.subTitle}>UNILLANOS</h2>
@@ -24,14 +24,14 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className={styles.text_box}>
+{/*       <div className={styles.text_box}>
         <p>¡Bienvenidos al Primer Concurso de Robótica de la Universidad de los Llanos! 
         </p>
         <p>Explora el mundo de la tecnología y la innovación con nuestro emocionante evento de robótica. Organizado por la Universidad de los Llanos junto con nuestros talentosos estudiantes. 
         </p>
         <p>No te lo pierdas! ¡Sé parte del futuro hoy!
         </p>
-      </div>
+      </div> */}
     </section>
   );
 };

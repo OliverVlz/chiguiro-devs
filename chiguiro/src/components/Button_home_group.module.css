@@ -19,7 +19,7 @@
     cursor: pointer;
     font-weight: 500;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.1s ease, transform 0.3s linear;
     box-shadow: none;
     border: 0.08px solid red;
     margin: 0;
@@ -28,10 +28,12 @@
   .menu-button:hover {
     background-color: rgba(255, 0, 0, 0.726);
     border: 0.08px solid rgba(255, 0, 0, 0.726);
+    transform: scale(1.02);
 }
   
   .text-button:hover {
     background-color: rgba(255, 0, 0, 0.1);
+    transform: scale(1.02);
   }
 
   .menu-options {
@@ -71,12 +73,88 @@
     cursor: pointer;
     font-weight: 500;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.1s ease, transform 0.3s linear;
     box-shadow: none;
     border: 0.08px solid red;
     text-decoration: none;
     box-shadow: none;
     margin: 0;
+  }
+
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+  
+  .modal {
+    background: white;
+    color : black;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    max-height: 90vh;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+    color: red;
+  }
+  
+  .modal p {
+    margin-bottom: 10px;
+  }
+  
+  .modal ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+  }
+  
+  .modal a {
+    color: #007b8a;
+    text-decoration: none;
+  }
+  
+  .modal a:hover {
+    text-decoration: underline;
+  }
+  
+  .closeButton {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+
+  }
+  
+  .closeButton:hover {
+    background-color: #ff1f3a;
+  }
+  
+  @media (max-width: 768px) {
+    .modal {
+      max-width: 95%;
+      padding: 15px;
+    }
+  
+    .closeButton {
+      width: 100%;
+    }
   }
 
 

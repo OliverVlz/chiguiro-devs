@@ -4,17 +4,19 @@ import styles from './Button_home_group.module.css'; // Importar el archivo de e
 const Buttons = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showText, setShowText] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false); // Estado para el modal
+
   const menuRef = useRef(null);
   const textRef = useRef(null);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
-    setShowText(false); // Cerrar el otro elemento si está abierto
+    setShowText(false);
   };
 
   const toggleText = () => {
     setShowText(!showText);
-    setShowMenu(false); // Cerrar el otro elemento si está abierto
+    setShowMenu(false);
   };
 
   const closeMenus = (event) => {
@@ -35,7 +37,16 @@ const Buttons = () => {
 
   const handleItemClick = (url) => {
     window.open(url, '_blank');
-    setShowMenu(false); // Cerrar el menú después de hacer clic en un ítem
+    setShowMenu(false);
+  };
+
+  // Funciones para abrir y cerrar el modal
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
   };
 
   return (
@@ -47,10 +58,51 @@ const Buttons = () => {
       </div>
 
       <div className={styles['button-wrapper']} ref={textRef}>
-        <button className={styles['text-button']} onClick={toggleText}>
+        <button className={styles['text-button']} onClick={openModal}>
           Detalles
         </button>
       </div>
+
+      {modalOpen && (
+        <div className={styles.modalOverlay}>
+          <div className={styles.modal}>
+            <h2>Fechas Importantes</h2>
+            <p>
+              A continuacion se presentan las fechas limites importantes para el evento, 
+              dichas fechas son suceptibles a cambios en caso de algún imprevisto. 
+              Por favor contactarse con nosotros en caso de cualquier inquietud mediante 
+              el formualrio de contacto presente al final de esta pagina web.
+            </p>
+            <ul>
+              <li>
+                Pre - Inscripciones --
+                <a>
+                   10 de Octubre de 2024
+                </a>
+              </li>
+              <li>
+                Inscripciones --
+                <a>
+                  11 de Octubre de 2024
+                </a>
+              </li>
+              <li>
+                Concurso FUTBOL RC (Categoria Colegios) 
+                <a>
+                  17 de Octubre de 2024
+                </a>
+              </li>
+              <li>
+                Concurso general (Categoria General)
+                <a>
+                  18 de Octubre de 2024
+                </a>
+              </li>
+            </ul>
+            <button className={styles.closeButton} onClick={closeModal}>Cerrar</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
