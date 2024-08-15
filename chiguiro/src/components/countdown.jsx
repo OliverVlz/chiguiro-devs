@@ -8,9 +8,9 @@ const Countdown = ({targetDate}) => {
   useEffect(() => {
     const updateCountdown = () => {
       const currentDate = new Date();
-      console.log(currentDate);
+      /* console.log(currentDate); */
       // const difference = targetDate - currentDate;
-      console.log(targetDate);
+      /* console.log(targetDate); */
       const difference = targetDate.getTime() - currentDate.getTime();
       if (difference <= 0) {
         setTimeRemaining('¡YA ES HORA, PONTE A PRUEBA!');

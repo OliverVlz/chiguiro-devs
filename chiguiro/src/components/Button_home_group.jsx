@@ -75,25 +75,19 @@ const Buttons = () => {
             </p>
             <ul>
               <li>
-                Pre - Inscripciones --
-                <a>
-                   10 de Octubre de 2024
-                </a>
-              </li>
-              <li>
-                Inscripciones --
+                Inscripciones -
                 <a>
                   11 de Octubre de 2024
                 </a>
               </li>
               <li>
-                Concurso FUTBOL RC (Categoria Colegios) 
+                Concurso FUTBOL RC (Categoria Colegios) -
                 <a>
                   17 de Octubre de 2024
                 </a>
               </li>
               <li>
-                Concurso general (Categoria General)
+                Concurso general (Categoria General) -
                 <a>
                   18 de Octubre de 2024
                 </a>
