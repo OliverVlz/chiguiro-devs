@@ -47,10 +47,10 @@
 }
 
 .boton {
-  flex-shrink: 1;
   width: auto; /* Ancho automático para el botón de descarga */
-  max-width: 300px; /* Ancho máximo para evitar que se estire demasiado */
   margin-top: 10px; /* Margen superior para separación */
+  justify-content: center;
+  align-items: center;
 }
 
 .popup {
@@ -69,6 +69,13 @@
   gap: 10px;
   margin-bottom: 20px;
   position: relative;
+  font-size: 2.5vw;
+}
+
+@media (min-width: 670px) {
+  .tabs {
+    font-size: 1rem;
+  }
 }
 
 .tabs label {
@@ -180,18 +187,4 @@
   background-color: red;
   color: white;
   border: 2px solid red;
-}
-
-@media (max-width: 768px) {
-  .tabButton {
-    flex-basis: 100%; /* Los botones ocuparán el 100% del ancho disponible en pantallas pequeñas */
-    max-width: none; /* Elimina el ancho máximo en pantallas pequeñas */
-    padding: 10px 15px; /* Reduce el padding en pantallas pequeñas */
-    font-size: 1rem; /* Reduce el tamaño de fuente en pantallas pequeñas */
-  }
-
-  .boton {
-    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-    margin-top: 15px; /* Margen superior para separación en pantallas pequeñas */
-  }
 }

@@ -122,7 +122,7 @@ const Schedule = () => {
             {
                 id: 6, label: (
                     <div>
-                        <p>Sumo(Auto/RC)-Velocista</p>
+                        <p>Sumos - Velocista</p>
                         <p> 2:30 - 3:30 pm </p>
                     </div>
                 ),

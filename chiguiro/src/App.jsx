@@ -25,8 +25,9 @@ const App = () => {
         <Ubication />
         <Contact />
         <OrganizersSponsors />
+        <Footer />
       </div>
-      <Footer />
+      
     </div>
   );
 };
