@@ -12,14 +12,16 @@ export default function Card({
   return (
     <div className="card">
       <div className="card__header">
-        <img src={imgSrc} alt="Imagen de la tarjeta" />
+        <img src={imgSrc} alt="Imagen de la tarjeta" loading='lazy'/>
       </div>
       <div className="card__body">
         <h1 className="card__body__head">{constentHead}</h1>
         <p className="card__body__content">{constentPara}</p>
         
         <div className="card__button-container">
-          <Button label="Descargar Reglamento" downloadLink={downloadLink} />
+          <a href={downloadLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} >
+            <Button label="Descargar Reglamento" />
+          </a>
         </div>
 
       </div>
