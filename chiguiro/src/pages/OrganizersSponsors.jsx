@@ -41,7 +41,7 @@ const sponsors = [
   { 
     name: 'Smartech', 
     src: '/Sponsors/SMARTECH_LOGO-1.png',
-    link: 'https://www.facebook.com/SmartechLatinoamerica'
+    link: 'https://smartechcolombia.com.co/'
   }
 ];
 
@@ -69,6 +69,7 @@ const OrganizersSponsors = () => {
             src={organizer.src} 
             alt={`${organizer.name} logo`} 
             className={styles.logoOrg} 
+            loading='lazy'
           />
         ))}
       </div>
@@ -82,6 +83,7 @@ const OrganizersSponsors = () => {
             className={`${styles.logoSponsors} ${sponsor.name === 'Sasoftco' ? styles.largerLogo : ''}`} 
             onClick={() => handleSponsorClick(sponsor.link)}
             style={{ cursor: 'pointer' }}
+            loading='lazy'
           />
         ))}
       </div>

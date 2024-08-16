@@ -223,9 +223,9 @@ const Schedule = () => {
                 content: (
                     <div>
                         <h1>Registro</h1>
-                        <h2>Registro - Centro Comercial Viva</h2>
+                        <h2>Registro</h2>
                         <h3>9:00 - 9:30 am</h3>
-                        <p>¡Bienvenidos! Los participantes deben ingresar y registrarse en el centro comercial Viva Villavicencio. Por favor, asegúrese de llegar a tiempo para completar el proceso de registro y recibir su kit de bienvenida.</p>
+                        <p>¡Bienvenidos! Los participantes deben de ingresar y registrarse. Por favor, asegúrese de llegar a tiempo para completar el proceso de registro y recibir su kit de bienvenida.</p>
                     </div>
                 )
             },
@@ -399,10 +399,20 @@ const Schedule = () => {
                     General
                 </button>
                 <div className={styles.boton}>
+                <a 
+                    href={currentOption === 'option1' 
+                        ? "https://drive.google.com/file/d/1m5xLTg43UM30AwpG9qQyE6gfIEgwXoQN/view?usp=sharing" 
+                        : "https://drive.google.com/file/d/1RqVIObtOVukJREw6OYWCEg_ipL1wLcUp/view?usp=sharing"} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: 'none' }} 
+                >
                     <Button 
-                        label={currentOption === 'option1' ? "Descargar Calendario General" : "Descargar Calendario Colegios"} 
-                        downloadLink={currentOption === 'option1' ? "/CronogramaCompetencia.pdf" : "/CronogramaCompetencia_Colegios.pdf"} 
+                        label={currentOption === 'option1' 
+                            ? "Descargar Calendario General" 
+                            : "Descargar Calendario Colegios"} 
                     />
+                </a>
                 </div>
             </div>
 
