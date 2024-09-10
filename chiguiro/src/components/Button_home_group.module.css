@@ -1,162 +1,174 @@
 .buttons-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .button-wrapper {
-    position: relative;
-    margin: 2px;
-  }
-  
-  .menu-button {
-    color: white;
-    background-color: red;
-    padding: 0.3rem 0.8rem;
-    line-height: 1.8;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.02857em;
-    cursor: pointer;
-    font-weight: 500;
-    border-radius: 5px;
-    transition: background-color 0.1s ease, transform 0.3s linear;
-    box-shadow: none;
-    border: 0.08px solid red;
-    margin: 0;
-  }
-  
-  .menu-button:hover {
-    background-color: rgba(255, 0, 0, 0.726);
-    border: 0.08px solid rgba(255, 0, 0, 0.726);
-    transform: scale(1.02);
+  display: flex;
+  justify-content: center;
 }
-  
-  .text-button:hover {
-    background-color: rgba(255, 0, 0, 0.1);
-    transform: scale(1.02);
-  }
 
-  .menu-options {
-    position: absolute;
-    top: calc(100% + 5px);
-    left: calc(-5px);
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    display: flex; /* Utilizar flexbox para organizar los elementos */
-    flex-direction: column; /* Organizar los elementos en columnas */
-    min-width: 150px; /* Ancho mínimo para evitar que sea demasiado pequeño */
-  }
-  
-  .menu-options p {
-    padding: 10px 12px;
-    font-size: 0.75rem;
-    color: #740606;
-    margin: 0;
-    cursor: pointer;
-  }
-  
-  .menu-options p:hover {
-    background-color: #f0f0f0;
-  }
+.button-wrapper {
+  position: relative;
+  margin: 2px;
+}
 
-  .text-button {
-    color: red;
-    background-color: transparent;
-    padding: 0.3rem 0.8rem;
-    line-height: 1.8;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.02857em;
-    cursor: pointer;
-    font-weight: 500;
-    border-radius: 5px;
-    transition: background-color 0.1s ease, transform 0.3s linear;
-    box-shadow: none;
-    border: 0.08px solid red;
-    text-decoration: none;
-    box-shadow: none;
-    margin: 0;
-  }
+.menu-button {
+  color: white;
+  background-color: red;
+  padding: 0.3rem 0.8rem;
+  line-height: 1.8;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02857em;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background-color 0.1s ease, transform 0.3s linear;
+  box-shadow: none;
+  border: 0.08px solid red;
+  margin: 0;
+}
 
-  .modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-  }
-  
-  .modal {
-    background: white;
-    color : black;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    width: 90%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    overflow-y: auto;
-    max-height: 90vh;
-  }
-  
-  .modal h2 {
-    margin-top: 0;
-    color: red;
-  }
-  
-  .modal p {
-    margin-bottom: 10px;
-  }
-  
-  .modal ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    text-align: left;
-  }
-  
-  .modal a {
-    color: #007b8a;
-    text-decoration: none;
-  }
-  
- /*  .modal a:hover {
+.menu-button:hover {
+  background-color: rgba(255, 0, 0, 0.726);
+  border: 0.08px solid rgba(255, 0, 0, 0.726);
+  transform: scale(1.02);
+}
+
+.text-button:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+  transform: scale(1.02);
+}
+
+.notification-dot {
+  position: absolute;
+  top: -10px; /* Ajusta la posición */
+  right: -10px; /* Ajusta la posición */
+  width: 18px; /* Tamaño del círculo */
+  height: 18px;
+  background-color: yellow;
+  color: red; /* Color del símbolo "!" */
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid white; /* Opcional para borde blanco */
+}
+
+.menu-options {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: calc(-5px);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex; /* Utilizar flexbox para organizar los elementos */
+  flex-direction: column; /* Organizar los elementos en columnas */
+  min-width: 150px; /* Ancho mínimo para evitar que sea demasiado pequeño */
+}
+
+.menu-options p {
+  padding: 10px 12px;
+  font-size: 0.75rem;
+  color: #740606;
+  margin: 0;
+  cursor: pointer;
+}
+
+.menu-options p:hover {
+  background-color: #f0f0f0;
+}
+
+.text-button {
+  color: red;
+  background-color: transparent;
+  padding: 0.3rem 0.8rem;
+  line-height: 1.8;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02857em;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background-color 0.1s ease, transform 0.3s linear;
+  box-shadow: none;
+  border: 0.08px solid red;
+  text-decoration: none;
+  box-shadow: none;
+  margin: 0;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.modal h2 {
+  margin-top: 0;
+  color: red;
+}
+
+.modal p {
+  margin-bottom: 10px;
+}
+
+.modal ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.modal a {
+  color: #007b8a;
+  text-decoration: none;
+}
+
+/*  .modal a:hover {
     text-decoration: underline;
   } */
-  
+
+.closeButton {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.closeButton:hover {
+  background-color: #ff1f3a;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    max-width: 95%;
+    padding: 15px;
+  }
+
   .closeButton {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-
+    width: 100%;
   }
-  
-  .closeButton:hover {
-    background-color: #ff1f3a;
-  }
-  
-  @media (max-width: 768px) {
-    .modal {
-      max-width: 95%;
-      padding: 15px;
-    }
-  
-    .closeButton {
-      width: 100%;
-    }
-  }
-
-
-  
-  
+}
