@@ -82,7 +82,7 @@ const Buttons = () => {
             </p>
             <ul>
               <li>
-                Inscripciones -<a>18 de Octubre de 2024</a>
+                Inscripciones hasta -<a>18 de Octubre de 2024</a>
               </li>
               <li>
                 Concurso general (Todas las categorias) -
