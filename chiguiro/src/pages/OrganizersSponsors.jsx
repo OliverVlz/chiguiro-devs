@@ -5,52 +5,52 @@ import styles from "./OrganizersSponsors.module.css";
 const sponsors = [
   {
     name: "CARS Ingeniería",
-    src: "/Sponsors/CARS Ingeniería 4-3.png",
+    src: "/Sponsors/CARS Ingeniería 4-3.webp",
     link: "https://cars-ingenieria.com/",
   },
   {
     name: "DakotaLab",
-    src: "/Sponsors/Marca - DakotaLab (vertical).png",
+    src: "/Sponsors/Marca - DakotaLab (vertical).webp",
     link: "https://www.dakotalab.org/",
   },
   {
     name: "Sasoftco",
-    src: "/Sponsors/sasoftco.png",
+    src: "/Sponsors/sasoftco.webp",
     link: "https://sasoftco.com/",
   },
   {
     name: "Enciso Systems",
-    src: "/Sponsors/enciso-systems-logo-r-600.png",
+    src: "/Sponsors/enciso-systems-logo-r-600.webp",
     link: "https://encisosystems.com/",
   },
   {
     name: "LogoSkytech",
-    src: "/Sponsors/LogoSkytech.jpeg",
+    src: "/Sponsors/LogoSkytech.webp",
     link: "https://skytechsas.com/",
   },
   {
     name: "Ignicion Games",
-    src: "/Sponsors/Ignicion Games - Logo.png",
+    src: "/Sponsors/Ignicion Games - Logo.webp",
     link: "https://igniciongames.com",
   },
   {
     name: "Lexa",
-    src: "/Sponsors/logolexa.png",
+    src: "/Sponsors/logolexa.webp",
     link: "https://lexatecnologia.com/es",
   },
   {
     name: "Smartech",
-    src: "/Sponsors/SMARTECH_LOGO-1.png",
+    src: "/Sponsors/SMARTECH_LOGO-1.webp",
     link: "https://smartechcolombia.com.co/",
   },
 ];
 
 // Lista de organizadores con sus rutas relativas
 const organizers = [
-  { name: "Unillanos", src: "/Organizers/Unillanos.png" },
-  { name: "EYSI", src: "/Organizers/EYSI.png" },
-  { name: "IEEE", src: "/Organizers/IEEE-Photoroom.png" },
-  { name: "i-conbot", src: "/Organizers/i-CONBOT-1.png" },
+  { name: "Unillanos", src: "/Organizers/Unillanos.webp" },
+  { name: "EYSI", src: "/Organizers/EYSI.webp" },
+  { name: "IEEE", src: "/Organizers/IEEE-Photoroom.webp" },
+  { name: "i-conbot", src: "/Organizers/i-CONBOT-1.webp" },
 ];
 
 const OrganizersSponsors = () => {
