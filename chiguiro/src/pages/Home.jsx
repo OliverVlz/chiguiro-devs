@@ -2,8 +2,6 @@
 import React from "react";
 import styles from "./Home.module.css"; // Importa los estilos del módulo CSS
 import logo from "../assets/LogoCircle.png"; // Ajusta el path según la ubicación de tu logo
-// import Button_home_inscripcion from '../components/Button_home_inscripcion';
-// import Button_home_detalles from '../components/Button_home_detalles';
 import Buttons from "../components/Button_home_group";
 
 const Home = () => {
