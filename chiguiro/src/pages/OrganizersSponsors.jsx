@@ -45,6 +45,15 @@ const sponsors = [
   },
 ];
 
+// Nuevo patrocinador diferenciado como distribuidor oficial
+const distributor = {
+  name: "MECABOT",
+  src: "/Sponsors/LOGO mecabot.webp", // Asegúrate de que esta imagen esté disponible en la ruta correcta
+  link: "https://mecabot.com/",
+  description:
+    "Distribuidor oficial del concurso METAROBOTS - Descuento exclusivo para participantes",
+};
+
 // Lista de organizadores con sus rutas relativas
 const organizers = [
   { name: "Unillanos", src: "/Organizers/Unillanos.webp" },
@@ -71,6 +80,7 @@ const OrganizersSponsors = () => {
           />
         ))}
       </div>
+
       <h2>Patrocinadores</h2>
       <div className={styles.sponsors}>
         {sponsors.map((sponsor, index) => (
@@ -85,6 +95,20 @@ const OrganizersSponsors = () => {
             style={{ cursor: "pointer" }}
           />
         ))}
+      </div>
+
+      {/* Widget del distribuidor oficial en la esquina inferior izquierda */}
+      <div className={styles.distributorWidget}>
+        <img
+          src={distributor.src}
+          alt={`${distributor.name} logo`}
+          className={styles.widgetImage}
+          onClick={() => handleSponsorClick(distributor.link)}
+          style={{ cursor: "pointer" }}
+        />
+        <div className={styles.widgetText}>
+          <p>{distributor.description}</p>
+        </div>
       </div>
     </div>
   );
