@@ -8,12 +8,10 @@ const AwardsFutbol = () => {
       <div className={`${styles.column} ${styles.textContent}`}>
         <div className={styles.titleContainer}>
             <h3>FUTBOL RC</h3>
-            <h4>1er Lugar: 500,000 pesos</h4>
-            <p>El primer lugar de cada categoría se llevará un impresionante bono de 500.000 pesos. 
+            <h4>1er Lugar: Hasta 500,000 pesos</h4>
+            <p>El primer lugar de cada categoría se llevará un impresionante bono de hasta 500.000 pesos. 
                 Este premio reconoce la excelencia, el esfuerzo y la dedicación de los campeones en FUTBOL RC.</p>
-            <h4>2do Lugar: 200,000 pesos</h4>
-            <p>El segundo lugar de cada categoría recibirá un generoso bono de 200.000 pesos.
-               Este premio celebra el talento y la determinación de los subcampeones en cada disciplina.</p>
+            <p>El valor exacto del premio en efectivo y la cantidad de de los mismos están sujetos al número de inscritos por categoría y será informado una vez finalice la etapa de inscripción.</p>
         </div>    
             
         <hr />  

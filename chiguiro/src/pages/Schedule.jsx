@@ -465,6 +465,7 @@ const Schedule = () => {
               </>
             </span>
           </h2>
+          <p>El cronograma de la competencia es susceptible a cambios y sera informado una vez finalice la etapa de inscripción.</p>
         </div>
       </div>
 
