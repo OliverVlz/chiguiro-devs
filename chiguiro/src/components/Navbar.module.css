@@ -72,3 +72,14 @@
     margin: 10px 0;
   }
 }
+
+.disabledLink {
+  pointer-events: none; /* Desactiva la interacción */
+  background-color: grey; /* Cambia el color de fondo para indicar inactividad */
+  color: #ccc; /* Color del texto para un estado inactivo */
+  cursor: not-allowed; /* Muestra un cursor de no permitido */
+}
+
+.disabledLink:hover {
+  background-color: grey; /* Mantiene el color al hacer hover */
+}

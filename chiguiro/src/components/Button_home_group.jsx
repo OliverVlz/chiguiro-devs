@@ -52,12 +52,7 @@ const Buttons = () => {
   return (
     <div className={styles["buttons-container"]}>
       <div className={styles["button-wrapper"]} ref={menuRef}>
-        <button
-          className={styles["menu-button"]}
-          onClick={() =>
-            window.open("https://forms.gle/9shq4czv8t65yyrp9", "_blank")
-          }
-        >
+        <button className={styles["menu-button"]} disabled>
           Inscripción
         </button>
       </div>
@@ -82,7 +77,9 @@ const Buttons = () => {
             </p>
             <ul>
               <li>
-                Inscripciones hasta -<a>18 de Octubre de 2024</a>
+                <del>
+                  Inscripciones hasta - <a>18 de Octubre de 2024</a>
+                </del>
               </li>
               <li>
                 Concurso general (Todas las categorias) -
