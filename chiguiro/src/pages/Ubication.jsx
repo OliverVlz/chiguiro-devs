@@ -44,7 +44,7 @@ const RecenterButton = ({ position }) => {
 };
 
 const Ubication = () => {
-  const position = [4.07535, -73.5851]; // Coordenadas del Auditorio Eduardo Carranza
+  const position = [4.07502, -73.58423]; // Coordenadas del Auditorio Eduardo Carranza
 
   return (
     <section id="ubicacion" className={styles.ubicationSection}>

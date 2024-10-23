@@ -188,3 +188,31 @@
   color: white;
   border: 2px solid red;
 }
+
+.simpleImage {
+  max-width: 100%; /* La imagen ocupa el 100% del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo responsive para pantallas grandes */
+@media (min-width: 1024px) {
+  .simpleImage {
+    max-width: 90vh; /* Para pantallas grandes, limitar la altura de la imagen */
+  }
+}
+
+/* Estilo responsive para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+  .simpleImage {
+    max-width: 90vw; /* En pantallas más pequeñas, usa un porcentaje del ancho de la ventana */
+  }
+}
+
+/* Estilo responsive para pantallas móviles */
+@media (max-width: 768px) {
+  .simpleImage {
+    max-width: 80vw; /* Para pantallas móviles, reducir aún más el ancho */
+  }
+}

@@ -24,11 +24,6 @@ const sponsors = [
     link: "https://encisosystems.com/",
   },
   {
-    name: "LogoSkytech",
-    src: "/Sponsors/LogoSkytech.webp",
-    link: "https://skytechsas.com/",
-  },
-  {
     name: "Ignicion Games",
     src: "/Sponsors/Ignicion Games - Logo.webp",
     link: "https://igniciongames.com",
@@ -37,11 +32,6 @@ const sponsors = [
     name: "Lexa",
     src: "/Sponsors/logolexa.webp",
     link: "https://lexatecnologia.com/es",
-  },
-  {
-    name: "Smartech",
-    src: "/Sponsors/SMARTECH_LOGO-1.webp",
-    link: "https://smartechcolombia.com.co/",
   },
 ];
 
