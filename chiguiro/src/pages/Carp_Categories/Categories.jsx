@@ -53,7 +53,7 @@ const Categories = () => {
           imgSrc="/Categories_Imagenes/FUTBOLRC1.png"
           constentHead="FUTBOL RC"
           constentPara="Competiciones de fútbol con robots radiocontrolados para niños de colegio. Los participantes usan habilidades y estrategias para ganar partidos. Una experiencia emocionante de tecnología y deporte."
-          downloadLink="https://drive.google.com/file/d/18f96vTa04tlswd8NdkaEPAHFVyFWtJAt/view?usp=sharing"
+          downloadLink="https://drive.google.com/file/d/11AtZ3K93icLZt_L2wXK28pzeiyqD5psN/view?usp=sharing"
         />
       </div>
       
